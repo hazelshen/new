@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>購物車-結帳頁面</title>
+    <style>
+          *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        /* 導覽列 */
+        body{
+            padding-top: 200px;
+        }
+        .header{
+           position: fixed;
+           width: 100%;
+           background-color: white;
+           top: 0;
+           left: 0;
+           z-index: 2;
+            
+        }
+        .icon-container{
+            display: flex;
+            width: 1200px;
+            justify-content: flex-end;
+            padding: 10px;
+            margin: auto;
+        }
+        .icon-container .icon a{
+            color: #9B866A;
+            font-size: 20px;
+            letter-spacing: 10px;
+        }
+        .main-header{
+            display: flex;
+            width: 1200px;
+            align-items: center;
+            margin: auto;
+            margin-top:-50px;
+        }
+        .main-header .main-nav{
+            display: flex;
+            background-color: #F2E9DE;
+            padding: 10px;
+            width: 1053px;
+            border-radius: 0 100px 100px 0;
+            justify-content: space-around;
+            
+        }
+        .main-header .main-nav a{
+            text-decoration: none;
+            color: #9B866A;
+        }
+        .main-header .logo{
+            width: 100px;
+            z-index: 2;
+        }
+        /* 結帳順序 */
+        .list{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width:1200px;
+       
+            }
+        .list .now{
+            background-color: #9B866A;
+            color: white;
+        }
+        .list li{
+            display: flex;
+            flex-direction: column;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 1px solid #9B866A;
+            /* background-color: aqua; */
+            color: #9B866A;
+           justify-content: center;
+            text-align: center;
+            position: relative;
+            
+            }
+       
+        .list li + li{
+            margin-left: 200px;
+        }
+        .list li + li::before{
+            content:'';
+            position: absolute;
+            width: 200px;
+            height: 5px;
+            background-color:#9B866A ;
+            top: 0;
+            bottom: 0;  
+            margin: auto;
+            left: -200px;
+        }
+        .box{
+            width: 1200px;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+        .box .text{
+            display: flex;
+            justify-content: center;
+            /* margin: auto; */
+           
+        }
+        .box span{
+            width: 56px;
+            text-align: center;
+            padding-top: 20px;
+            
+            font-size: 14px;
+        }
+        .text span+span{
+            margin-left: 200px;
+        }
+        /* 購物車結帳資訊----商品明細 */
+        .cart-info{
+            display: flex;
+            flex-direction: column;
+            width: 1200px;
+            margin: auto;
+            padding-top: 35px;
+        }
+        h2{
+            border-left: 8px solid #9B866A;
+            padding-left: 5px;
+        }
+        .cart-info-nav{
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid #9B866A;
+            padding: 10px;
+        }
+        .product-list{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 20px;
+        }
+        .product-list .product-name{
+            flex-grow: 1;
+            width: 200px;
+            padding: 5px;
+        }
+        .product-price{
+            flex-grow: 1.3;
+        }
+        .product-quantity{
+            flex-grow: 1.2;
+        }
+        .product-cost{
+            flex-grow: 0.6;
+        }
+        .product-name .size{
+            font-size: 14px;
+        }
+        .product-quantity button{
+            width: 20px;
+            border: none;
+            background-color: white;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .product-quantity .input-num{
+            width: 50px;
+            text-align: center;
+            border: none;   
+        }
+        /*送貨及付款方式 */
+        .summary{
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            justify-content: space-between;
+            padding-top: 80px;
+            /* background-color: darkorange; */
+        }
+        h3{
+            /* padding-right: 10px; */
+            width: 420px;
+            /* background-color: pink; */
+            border-bottom: 1px solid #9B866A;
+            padding-bottom: 5px;
+        }
+        .delivery-method p,.order-information p{
+            padding-top: 20px;
+        }
+        .delivery-method .method,.payment,input{
+            border-radius: 5px;
+        }
+        .subtotal,.freight,.total{
+            display: flex;
+            justify-content: space-between;
+        }
+        .order-information .discount{
+            font-size: 12px;
+        }
+        .order-information button{
+            font-size: 12px;
+            padding: 2px;
+            border-radius: 5px;
+            width: 50px;
+            background-color:#E6D6C7;
+            border: 1px solid #E6D6C7    
+        }
+        .order-information .coupon{
+            padding-bottom: 80px;
+        }
+        .order-information .total{
+            border-top: 1px solid #9B866A;
+            color: #9B866A;
+            font-weight: bolder;
+        }
+        .order-information .checkout{
+            padding-top: 50px;
+            text-align: center;
+        }
+        .order-information .checkout a{
+            border: 1px solid #9B866A;
+            border-radius: 5px;
+            text-decoration: none;
+            color:white;
+            background-color: #9B866A;
+            padding: 5px 40px 5px 40px;
+            font-size: 18px;
+        }
+        /* 訂購須知 */
+        .notice{
+            display: flex;
+            width: 1200px;
+            flex-direction: column;
+            padding-top: 100px;
+            margin: auto;
+        }
+        h4{
+            font-size: 16px;
+            border-bottom:1px solid #9B866A;
+        }
+        .notice ul,.notice p{
+            padding-top: 10px;
+            font-size: 14px;
+        }
+         /* top */
+         .top{
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            justify-content: flex-end;
+        }
+        /* 下方icon點選 */
+        .service-icon{
+            display: flex;
+            /* width: 1200px; */
+            height: 100px;
+            margin: auto;
+            margin-top:70px;
+           
+        }
+        .service-icon .icon-user,.icon-checklist,.icon-delivery,.icon-clothes,.icon-message{
+            width: 25%;
+            box-sizing: border-box;
+            padding: 15px;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .service-icon .icon-user a,.icon-checklist a,.icon-delivery a,.icon-clothes a,.icon-message a{
+            text-decoration: none;
+            color:rgba(0,0,0,0.7);
+            padding: 5px;
+            font-size: 25px;
+        }
+        .icon-user{
+           background-color: #9B866A;
+        }
+        .icon-checklist{
+            background-color: #B99D77;
+        }
+        .icon-delivery{
+            background-color: #D8B594;
+        }
+        .icon-clothes{
+            background-color: #DAC8B6;
+        }
+        .icon-message{
+            background-color: #F1E8DD;
+        }
+        /* 頁尾 */
+        .main-footer{
+            background-color: #E6D6C7;
+            display: flex;
+            justify-content: space-around;
+        }
+        .footer{
+            width: 1200px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .footer .footer-block{
+            display: flex;
+            width: 400px;       
+            text-align: center;
+            text-decoration: none;
+            color: #9B866A;
+            line-height: 30px;
+            justify-content:space-between;
+            font-size: 14px;
+        }
+        h5{
+            color: #7D7D7D;
+            font-size: 14px;
+        }
+        .footer-block .footer-list{
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-list a{
+            text-decoration: none;
+            color: #9B866A;
+        }
+        .footer-icon a{
+            color: #9B866A;
+            letter-spacing: 8px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 導覽列 -->
+    <header class="header">
+        <div class="icon-container">
+            <div class="icon">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="15-login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="15-cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-solid fa-comment"></i></a>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html" class="logo">
+                    <img src="logo02.svg" alt="baby">
+                </a> 
+            </div>
+                
+            <nav class="main-nav">
+                <a href="15-news&discount.html">最新消息</a>
+                <a href="#">本週新品</a>
+                <a href="15-babyproduct.html">嬰兒</a>
+                <a href="#">男童</a>
+                <a href="#">女童</a>
+                <a href="#">其他</a>
+                <a href="15-aboutus.html">關於我們</a>
+            </nav>
+        </div>
+    </header>
+    <!-- 結帳順序 -->
+    <div class="check-nav">
+        <ol class="list">
+            <li class="now">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ol>
+        <div class="box">
+            <div class="text">
+                <span>購物車</span>
+                <span>填寫資料</span>
+                <span>訂單確認</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 購物車結帳資訊 -->
+    <div class="cart-info">
+
+        <h2>購物車</h2>
+
+        <div class="cart-info-nav">
+            <span>商品資料</span>
+            <span>單件價格</span>
+            <span>數量</span>
+            <span>小計</span>
+        </div>
+
+        <!-- 商品明細1 -->
+        <div class="product-list">
+            <div class="product-pic">
+                <img src="07-390.png" width="68" height="71" alt="">
+            </div>
+            <div class="product-name">
+                <span>夏款撞色拼接袖手足套裝</span><br>
+                <span class="size">尺寸:80</span>
+            </div>
+        <!-- 單價 !-->
+            <div class="product-price"> 
+                NT$390
+            </div>
+            
+            <form class="product-quantity">
+                <button class="minus">-</button>
+                <input type="text" class="input-num" value="1">
+                <button class="plus">+</button>
+            </form>
+            
+        <!-- 小計 !-->
+            <div class="product-cost"> 
+                NT$390
+            </div>
+            <div class="delet">          
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <!-- 商品明細2 -->
+        <div class="product-list">
+            <div class="product-pic">
+                <img src="08-350.png" width="68" height="71" alt="">
+            </div>
+            <div class="product-name">
+                <span>韓版撞色we see you背心包屁衣</span><br>
+                <span class="size">尺寸:73</span>
+            </div>
+        <!-- 單價 !-->
+            <div class="product-price"> 
+                NT$350
+            </div>
+            <form class="product-quantity">
+                <button class="minus">-</button>
+                <input type="text" class="input-num" value="1">
+                <button class="plus">+</button>
+            </form>
+        <!-- 小計 !-->
+            <div class="product-cost"> 
+                NT$350
+            </div>
+            <div class="delet">          
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="summary">
+     <!-- 送貨及付款方式 -->
+        <div class="checkout-method">
+            <h3>選擇送貨及付款方式</h3>
+            <form class="delivery-method">
+                <p>送貨方式</p>
+                <select name="" id="" class="method">
+                    <option value="">711取貨不付款</option>
+                    <option value="">全家取貨不付款</option>
+                    <option value="">黑貓宅配</option>
+                </select>
+
+                <p>付款方式</p>
+                <select name="" id="" class="payment">
+                    <option value="">LINEPAY</option>
+                    <option value="">信用卡(Visa/Master/JCB)</option>
+                    <option value="">貨到付款</option>
+                </select>
+            </form>
+        </div>
+    <!-- 訂單資訊 -->
+        <div class="order-information">
+            <h3>訂單資訊</h3>
+            <div class="subtotal">
+                <p>小計:</p>
+                <p>NT$740</p>
+            </div>
+            <div class="freight">
+                <p>運費:</p>
+                <p>NT$60</p>
+            </div>
+            <form class="coupon">
+                <p class="discount">使用折扣代碼</p>
+                <input type="text">
+                <button type="button">套用</button>
+            </form>
+            <div class="total">
+                <p>合計:</p>
+                <p>NT$800</p>
+            </div>
+            <div class="checkout">
+                <a href="#">前往結帳</a>
+            </div>
+        </div>
+    </div>
+    <!-- 訂購須知 -->
+    <div class="notice">
+        <h4>訂購須知</h4>
+        <ul>
+            <li>【追加】之商品，出貨時間約7~20工作天不等，若無法等候請斟酌下單。
+                如您訂單中有現貨+【追加】，可留言給客服為您做拆單(未達免運需自負運費)</li>
+            <li>特價商品『售出不退』。</li>
+            <li>黑貓宅配運送天數約1-2天 ，遇特殊節慶或假日無法選擇到貨日期、到貨時段。</li>
+        </ul>
+        <p>官網保有活動最終修改解釋權。<br>有任何問題歡迎在訂單中留言!謝謝您的訂購。</p>
+    </div>
+    <!-- top -->
+    <div class="top">
+        <img src="top.png" alt="" width="40px" height="40px">
+    </div>
+    <!-- 下方icon點選 -->
+    <div class="service-icon">
+        <div class="icon-user">
+            <a href="#"><i class="fa-solid fa-users"></i></a>
+            會員制度
+        </div>
+        <div class="icon-checklist">            
+            <a href="#"><i class="fa-solid fa-list"></i></a>
+            購買須知
+        </div>
+        <div class="icon-delivery">
+            <a href="#"><i class="fa-solid fa-truck"></i></a>
+            運送政策
+        </div>
+        <div class="icon-clothes">
+            <a href="#"><i class="fa-solid fa-shirt"></i></a>
+            衣物保養
+        </div>
+        <div class="icon-message">
+            <a href="#"><i class="fa-solid fa-comments"></i></a>
+            客服專線
+        </div>  
+    </div>
+
+    <!-- 頁尾 -->
+    <div class="main-footer">
+        <div class="footer">
+            <div class="footer-block">
+                <div class="=footer-item">
+                    <h5>SERVICE</h5>
+                    <div class="footer-list">
+                        <a href="#">服務條款</a>
+                        <a href="#">免責聲明</a>
+                        <a href="#">隱私權保護</a>
+                    </div>
+                </div>
+                <div class="=footer-item">
+                    <h5>CONTACT</h5>
+                    <div class="footer-list">
+                        <p>客服電話：(02) 2203-1234</p>
+                        <p>客服信箱:service@gmail.com</p>
+                        <p>客服時間:MON-FRI 09:00~18:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-icon">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-line"></i></a>
+            </div>
+        </div>
+    </div>            
+</body>
+</html>

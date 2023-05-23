@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>最新消息</title>
+    
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        /* 導覽列 */
+        body{
+            padding-top: 200px;
+        }
+        .header{
+           position: fixed;
+           width: 100%;
+           background-color: white;
+           top: 0;
+           left: 0;
+            
+        }
+        .icon-container{
+            display: flex;
+            width: 1200px;
+            justify-content: flex-end;
+            padding: 10px;
+            margin: auto;
+        }
+        .icon-container .icon a{
+            color: #9B866A;
+            font-size: 20px;
+            letter-spacing: 10px;
+        }
+        .main-header{
+            display: flex;
+            width: 1200px;
+            align-items: center;
+            margin: auto;
+            margin-top:-50px;
+        }
+        .main-header .main-nav{
+            display: flex;
+            background-color: #F2E9DE;
+            padding: 10px;
+            width: 1053px;
+            border-radius: 0 100px 100px 0;
+            justify-content: space-around;
+            
+        }
+        .main-header .main-nav a{
+            text-decoration: none;
+            color: #9B866A;
+        }
+        .main-header .logo{
+            width: 100px;
+            z-index: 1;
+        }
+        /* 最新消息 */
+        h2{
+            text-align: center;
+            padding: 20px;
+        }
+        h2 span{
+            font-size: 22px;
+        }
+        .news-container{
+            display: flex;
+            margin: auto;
+            width: 1200px;
+            flex-direction: column;
+            padding: 100px;
+        }
+        .news-container .newslist a{
+            display: flex;
+            flex-direction:reverse;
+            justify-content: center;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            text-decoration: none;
+            color: black;
+            /* border-bottom: 1px solid black ; */
+        }
+        
+        .newslist .news-pic{
+            margin-right: 150px;
+        }
+        .news-pic img{
+            width: 100%;
+        }
+        /* 水平線 */
+        hr{
+            width:1000px;
+            margin: auto;
+        }
+        .newslist .news-content{
+            font-size: 18px;
+            width: 500px;
+            /* border-bottom: 1px solid black; */
+            padding: 5px;
+        }
+        .newslist .news-title{
+            font-size: 20px;
+            
+        }
+        .newslist .news-time{
+            font-size: 18px;
+            margin: 10px;
+            line-height: 40px;
+            /* border-bottom: 1px solid black; */
+        }
+         /* top */
+         .top{
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            justify-content: flex-end;
+            
+        }
+        /* 下方icon點選 */
+        .service-icon{
+            display: flex;
+            /* width: 1200px; */
+            height: 100px;
+            margin: auto;
+            margin-top: 100px;
+        }
+        .service-icon .icon-user,.icon-checklist,.icon-delivery,.icon-clothes,.icon-message{
+            width: 25%;
+            box-sizing: border-box;
+            padding: 15px;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .service-icon .icon-user a,.icon-checklist a,.icon-delivery a,.icon-clothes a,.icon-message a{
+            text-decoration: none;
+            color:rgba(0,0,0,0.7);
+            padding: 5px;
+            font-size: 25px;
+        }
+        .icon-user{
+           background-color: #9B866A;
+        }
+        .icon-checklist{
+            background-color: #B99D77;
+        }
+        .icon-delivery{
+            background-color: #D8B594;
+        }
+        .icon-clothes{
+            background-color: #DAC8B6;
+        }
+        .icon-message{
+            background-color: #F1E8DD;
+        }
+        /* 頁尾 */
+        .main-footer{
+            background-color: #E6D6C7;
+            display: flex;
+            justify-content: space-around;
+        }
+        .footer{
+            width: 1200px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .footer .footer-block{
+            display: flex;
+            width: 400px;       
+            text-align: center;
+            text-decoration: none;
+            color: #9B866A;
+            line-height: 30px;
+            justify-content:space-between;
+            font-size: 14px;
+        }
+        h4{
+            color: #7D7D7D;
+        }
+        .footer-block .footer-list{
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-list a{
+            text-decoration: none;
+            color: #9B866A;
+        }
+        .footer-icon a{
+            color: #9B866A;
+            letter-spacing: 8px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 導覽列 -->
+    <header class="header">
+        <div class="icon-container">
+            <div class="icon">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="15-login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="15-cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-solid fa-comment"></i></a>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html" class="logo">
+                    <img src="logo02.svg" alt="baby">
+                </a> 
+            </div>
+                
+            <nav class="main-nav">
+                <a href="15-news&discount.html">最新消息</a>
+                <a href="#">本週新品</a>
+                <a href="15-babyproduct.html">嬰兒</a>
+                <a href="#">男童</a>
+                <a href="#">女童</a>
+                <a href="#">其他</a>
+                <a href="15-aboutus.html">關於我們</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- 最新消息-->
+    
+    <h2>最新消息&優惠活動<br><span>News&Discount</span></h2>
+        <div class="news-container">
+            <div class="newslist">
+                <a href="#">
+                    <div class="news-pic">
+                        <img src="news01.svg" alt="news">
+                    </div>
+                    <div class="news-content">     
+                        <p class="news-title">週年慶折扣活動</p><br>
+                        <p class="news-time">活動期間:2023/05/01-2023/05/05<br>單筆訂單滿$1500輸入折扣碼即可享有優惠!</p>
+                    </div>
+                </a>
+            </div>
+            <hr>  
+            
+            <div class="newslist">
+                <a href="#">
+                    <div class="news-pic">
+                        <img src="news02.svg" alt="news">
+                    </div>
+                    <div class="news-content">
+                        <p class="news-title">消費滿額贈</p><br>
+                        <p class="news-time">活動期間:2023/05/01-2023/05/14<br>單筆訂單滿$1500即贈品牌提袋!</p>
+                    </div>
+                </a>
+           </div>
+        
+            <hr>
+            <div class="newslist">
+                <a href="#">
+                    <div class="news-pic">
+                        <img src="news03.svg" alt="news">
+                    </div>
+                    <div class="news-content">
+                        <p class="news-title">新品優惠</p><br>
+                        <p class="news-time">活動期間:2023/05/15-2023/05/17<br>全館新品單件95折!</p>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="newslist">
+                <a href="#">
+                    <div class="news-pic">
+                        <img src="news04.svg" alt="news">
+                    </div>
+                    <div class="news-content">
+                        <p class="news-title">快樂連假 限時折滿額折扣碼</p><br>
+                        <p class="news-time">活動期間:2023/05/01-2023/05/03<br>單筆訂單滿$2000輸入折扣碼即可享有優惠!</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- top -->
+        <div class="top">
+            <img src="top.png" alt="" width="40px" height="40px">
+        </div>
+    <!-- 下方icon點選 -->
+        <div class="service-icon">
+            <div class="icon-user">
+                <a href="#"><i class="fa-solid fa-users"></i></a>
+                會員制度
+            </div>
+            <div class="icon-checklist">            
+                <a href="#"><i class="fa-solid fa-list"></i></a>
+                購買須知
+            </div>
+            <div class="icon-delivery">
+                <a href="#"><i class="fa-solid fa-truck"></i></a>
+                運送政策
+            </div>
+            <div class="icon-clothes">
+                <a href="#"><i class="fa-solid fa-shirt"></i></a>
+                衣物保養
+            </div>
+            <div class="icon-message">
+                <a href="#"><i class="fa-solid fa-comments"></i></a>
+                客服專線
+            </div>  
+        </div>
+  
+    <!-- 頁尾 -->
+    <div class="main-footer">
+        <div class="footer">
+            <div class="footer-block">
+                <div class="=footer-item">
+                    <h4>SERVICE</h4>
+                    <div class="footer-list">
+                        <a href="#">服務條款</a>
+                        <a href="#">免責聲明</a>
+                        <a href="#">隱私權保護</a>
+                    </div>
+                </div>
+                <div class="=footer-item">
+                    <h4>CONTACT</h4>
+                    <div class="footer-list">
+                        <p>客服電話：(02) 2203-1234</p>
+                        <p>客服信箱:service@gmail.com</p>
+                        <p>客服時間:MON-FRI 09:00~18:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-icon">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-line"></i></a>
+            </div>
+        </div>
+    </div>
+    
+  
+    
+</body>
+</html>

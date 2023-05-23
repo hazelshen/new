@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="owl/assets/owl.carousel.css">
+    <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+    <title>首頁</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        /* 導覽列 */
+        .header{
+            background-image: url(bcg-img-02.png);
+            background-size: cover;
+            /* width: 1200px; */
+            height: 700px;
+            width: 100%;
+            background-repeat: no-repeat;
+        }
+        .icon-container{
+            display: flex;
+            width: 1200px;
+            justify-content: flex-end;
+            padding: 10px;
+            margin: auto;
+        }
+        .icon-container .icon a{
+            color: #9B866A;
+            font-size: 20px;
+            letter-spacing: 10px;
+        }
+        .main-header{
+            display: flex;
+            width: 1200px;
+            align-items: center;
+            margin: auto;
+            margin-top:-50px;
+        }
+        .main-header .main-nav{
+            display: flex;
+            background-color: #F2E9DE;
+            padding: 10px;
+            width: 1053px;
+            border-radius: 0 100px 100px 0;
+            justify-content: space-around;
+            
+        }
+        .main-header .main-nav a{
+            text-decoration: none;
+            color: #9B866A;
+        }
+        .main-header .logo{
+            width: 100px;
+            z-index: 1;
+        }
+        /* 空間 */
+        .index-event{
+            width: 1200px;
+            padding-top: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+        }
+        /* 首頁活動 */
+        .event-container{
+            display: flex;
+            width: 1200px;
+            justify-content: space-around;
+            margin-top: -450px;
+            text-align: center;
+        }
+        h2{
+            line-height: 40px;
+            letter-spacing: 5px;
+            font-weight:bolder;
+        }
+        .event-content p{
+            padding-top: 45px;
+            line-height: 30px;
+            font-size: 20px;
+        }
+        .event-content p span{
+            font-weight:bolder;
+        }
+        /* 活動圖片 */
+        .event-pic-first img{
+            border-radius: 15px;
+        }
+        .event-pic-second img{
+            border-radius: 15px;
+            margin-top: -200px;
+        }
+        /* 最新商品 */
+        .new-arrival{
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            flex-direction: column;
+            position: relative;
+        }
+        .star img{
+            position: absolute;
+            top: 100px;
+            left: 430px;
+        }
+        h3{
+            text-align: center;
+            font-size: 20px;
+            padding-top: 150px;
+        }
+        /* 4個圈圈 */
+        .new-arrival-theme{
+            display:flex;
+            width: 1200px;
+            margin: auto;
+        }
+        .new-arrival-theme img{
+            border-radius: 50%;
+        }
+        .new-arrival-theme .baby,.girl,.boy,.other{ 
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+        }
+        .new-arrival-theme .baby,.boy{
+            margin-top: 100px;
+        }
+        .new-arrival-theme .other .goodchoice{
+            font-size: 16px;
+            transform:rotate(15deg);
+            margin-left: 70px;
+        }
+        /* 全站好康＆好禮 */
+        .discount{
+            display: flex;
+            width: 800px;
+            padding-top: 100px;
+            margin: auto;
+            justify-content: space-around;
+        }
+        .shop-discount,.member-gift{
+            background-color: rgba(255, 181, 186, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+            top: 20px;
+            right: 110px;
+            font-size: 16px;
+        }
+        .discount-box{
+            width: 800px;
+            display: flex;
+            margin:auto;
+            justify-content:space-around;
+            background-color:rgba(194, 211, 241, 0.5);
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border-radius: 10px;
+            align-items: center;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+        }
+        /* 照片分享 */
+        .sharing{
+            position: relative;
+            padding-bottom: 80px;
+        }
+        .rainbow img{
+            position: absolute;
+            top: 100px;
+            left: 780px;
+            transform:rotate(15deg);
+        }
+        /* 圖片輪播 */
+        .sharing-box{
+            display: flex;
+            width: 1200px;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            position: relative;
+            
+        }
+        .sharing-box .owl-carousel img{
+            border-radius: 5px;            
+        }
+        .background-sharing img{
+            position: absolute;
+            top: -80px;
+            left: -120px;
+        }
+        /* 最新消息 */
+        .news{
+            padding-bottom: 80px;
+            position: relative;
+        }
+        .balloon img{
+            position: absolute;
+            top: 55px;
+            left: 560px;
+            transform:rotate(-15deg);
+        }
+        .news-box{
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            justify-content: space-around;
+            padding-bottom: 80px;
+        }
+        .news-box a{
+            text-decoration: none;
+            color: black;
+            text-align: center;
+        }
+        .news-box p{
+            padding-top: 10px;
+            font-size: 16px;
+        }
+        .news-box .time{
+            font-size: 14px;
+            padding-top: 10px;
+        }
+        /* 人氣商品 */
+        .hot-item{
+            padding-bottom: 120px;           
+            position: relative;
+            background-color:#FCE1E0;
+        }
+        .bubble img{
+            position: absolute;
+            top: 70px;
+            left: 780px;
+            transform:rotate(10deg);
+        }
+        .hot-item-box{
+            display: flex;
+            width: 1200px;
+            flex-direction: column;
+            margin: auto; 
+        }
+        .hot-item-card{
+            display: flex;
+            justify-content: space-around;
+            margin-top: -70px;
+            z-index: 1;
+
+        }
+        .hot-item-container{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 100px;
+        }
+        .item .item-pic img{
+            border-radius: 5px 5px 0 0;
+        }
+        .item .item-text{
+            text-align: center;
+            font-size: 14px;
+            padding: 5px;
+        }
+        .hot-item-card a,.hot-item-container a{
+            text-decoration: none;
+            color: black;
+        }
+        .item{
+            background-color: #F1E8DD;
+            border-radius: 5px;
+        }
+        /* shopnow */
+        .shop-now{
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        .shop-now a{
+            text-decoration: none;
+            color: black;
+        }
+        .shop-now p{
+            background-color: #F1E8DD;
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        /* 往上按鈕 */
+        .top{
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            justify-content: flex-end;
+        }
+        /* 下方icon點選 */
+        .service-icon{
+            display: flex;
+            /* width: 1200px; */
+            height: 100px;
+            margin: auto;
+            margin-top:80px;
+        }
+        .service-icon .icon-user,.icon-checklist,.icon-delivery,.icon-clothes,.icon-message{
+            width: 25%;
+            box-sizing: border-box;
+            padding: 15px;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .service-icon .icon-user a,.icon-checklist a,.icon-delivery a,.icon-clothes a,.icon-message a{
+            text-decoration: none;
+            color:rgba(0,0,0,0.7);
+            padding: 5px;
+            font-size: 25px;
+        }
+        .icon-user{
+           background-color: #9B866A;
+        }
+        .icon-checklist{
+            background-color: #B99D77;
+        }
+        .icon-delivery{
+            background-color: #D8B594;
+        }
+        .icon-clothes{
+            background-color: #DAC8B6;
+        }
+        .icon-message{
+            background-color: #F1E8DD;
+        }
+        /* 頁尾 */
+        .main-footer{
+            background-color: #E6D6C7;
+            display: flex;
+            justify-content: space-around;
+        }
+        .footer{
+            width: 1200px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .footer .footer-block{
+            display: flex;
+            width: 400px;       
+            text-align: center;
+            text-decoration: none;
+            color: #9B866A;
+            line-height: 30px;
+            justify-content:space-between;
+            font-size: 14px;
+        }
+        h4{
+            color: #7D7D7D;
+        }
+        .footer-block .footer-list{
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-list a{
+            text-decoration: none;
+            color: #9B866A;
+        }
+        .footer-icon a{
+            color: #9B866A;
+            letter-spacing: 8px;
+            font-size: 20px;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <!-- 導覽列 -->
+    <header class="header">
+        <div class="background">
+            <img src="" alt="">
+        </div>
+        <div class="icon-container">
+            <div class="icon">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="15-login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="15-cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-solid fa-comment"></i></a>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html" class="logo">
+                    <img src="logo02.svg" alt="baby">
+                </a> 
+            </div>
+                
+            <nav class="main-nav">
+                <a href="15-news&discount.html">最新消息</a>
+                <a href="#">本週新品</a>
+                <a href="15-babyproduct.html">嬰兒</a>
+                <a href="#">男童</a>
+                <a href="#">女童</a>
+                <a href="#">其他</a>
+                <a href="15-aboutus.html">關於我們</a>
+            </nav>
+        </div>
+    </header>
+    <!-- 首頁活動 -->
+    <div class="index-event">
+        <div class="background-space">
+            <img src="index01.png" alt="">
+        </div>
+        <div class="event-container">        
+            <div class="event-content">
+                <h2>Happy Mother's Day<br><span>5/1-5/14</span></h2>
+                <p>全館滿<span>NT$3000</span><br>現折<span>NT$300</span></p>
+                <p>全館滿<span>$1500</span><br>贈品牌提袋</p>
+            </div>
+            <div class="event-pic-first">
+                <img src="index02.png" alt="" width="375" height="517">
+            </div>
+            <div class="event-pic-second">
+                <img src="index13.png" alt="" width="375" height="517">
+            </div>
+        </div>
+    </div>
+    <!-- 最新商品 -->
+    <div class="new-arrival">
+        <div class="star">
+            <img src="star.png" alt="" width="55px" height="46px"> 
+        </div>
+        <h3>New Arrival</h3>
+        <div class="new-arrival-theme">
+            <div class="baby">
+                <a href="#"><img src="index03.png" alt="" width="268px" height="260px"></a>
+                <span>Baby</span>
+            </div>
+            <div class="girl">
+                <a href="#"><img src="index05.png" alt="" width="268px" height="260px"></a>
+                <span>Girl</span>
+            </div>
+            <div class="boy">
+                <a href="#"><img src="index16.png" alt="" width="268px" height="260px"></a>
+                <span>Boy</span>
+            </div>
+            <div class="other">
+                <span class="goodchoice">\ &emsp;送禮首選&emsp; /</span>
+                <a href="#"><img src="index11.png" alt="" width="268px" height="260px"></a>
+                <span>Other</span>
+            </div>
+        </div>
+    </div>
+    <!-- 全站好康＆好禮 -->
+    <div class="discount">
+        <div class="shop-discount">
+            <p>全站享好康</p>
+        </div>
+        <div class="member-gift">
+            <p>會員享好禮</p>
+        </div>
+    </div>
+    <div class="discount-box">
+        <div class="free-coupon">
+            <img src="index-dis01.png" alt="" width="108px" height="80">
+            <p>滿NT$1500免運費</p>
+        </div>
+        <div class="instock">
+            <img src="index-dis02.png" alt="" width="96px" height="80px">
+            <p>現貨商品<br>快速出貨</p>
+        </div>
+        <div class="member-discount">
+            <img src="index-dis03.png" alt="" width="84px" height="80px">
+            <p>新會員首購折$100</p>
+        </div>
+        <div class="after-service">
+            <img src="index-dis04.png" alt="" width="88px" height="80px">
+            <p>提供商品售後服務</p>
+        </div>
+    </div>
+    <!-- 照片分享＆圖片輪播 -->
+    <div class="sharing">
+        <h3>Sharing</h3>
+        <div class="rainbow">
+            <img src="rainbow.png" alt="" width="73px" height="73px">
+        </div>
+    </div>
+    <div class="sharing-box">
+        <div class="background-sharing">
+            <img src="index17.png" alt="">
+        </div>
+        <div class="owl-carousel owl-theme">
+            <img src="index12.png" alt="" width="400px" height="300px">
+            <img src="index14.png" alt="" width="400px" height="300px">
+            <img src="index06.png" alt="" width="400px" height="300px">
+            <img src="index07.png" alt="" width="400px" height="300px">
+            <img src="index08.png" alt="" width="400px" height="300px">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="owl/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+        items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+ }
+});
+    });
+</script>
+    <!-- 最新消息 -->
+    <div class="news">
+        <div class="balloon">
+            <img src="balloon.png" alt="" width="92px" height="114px">
+        </div>
+        <h3>News</h3>
+    </div>
+    <div class="news-box">
+        <a href="#">
+            <div class="news-anniv">
+            <img src="index-new01.png" alt="" width="316px" height="316px">
+            <p>歡慶週年慶</p>
+            <span class="time">2023/05/05</span>
+            </div>
+        </a>
+        <a href="#">
+            <div class="news-freegift">
+                <img src="index-new02.png" alt="" width="316px" height="316px">
+                <p>消費滿額贈</p>
+                <span class="time">2023/05/10</span>
+            </div>
+        </a>
+        <a href="#">
+            <div class="news-newarrival">
+                <img src="index-new03.png" alt="" width="316px" height="316px">
+                <p>新品優惠</p>
+                <span class="time">2023/05/15</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- 人氣商品 -->
+    <div class="hot-item">
+        <h3>Hot Sale Item</h3>
+        <div class="bubble">
+            <img src="bubble.png" alt="" width="145px" height="97">
+        </div>
+    </div>
+    <div class="hot-item-box">
+        <div class="hot-item-card">
+            <a href="#">
+                <div class="item">
+                    <div class="item-pic">
+                        <img src="hotitem01.png" alt="" width="256px" height="272px">
+                    </div>
+                    <div class="item-text">
+                        <p>三色雲表情圖包屁衣</p>
+                        <p>NT$390</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="item">
+                    <div class="item-pic">
+                        <img src="hotitem02.png" alt="" width="256px" height="272px">
+                    </div>
+                    <div class="item-text">
+                        <p>竹節棉口袋短袖上衣</p>
+                        <p>NT$300</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="item">
+                    <div class="item-pic">
+                        <img src="hotitem03.png" alt="" width="256px" height="272px">
+                    </div>
+                    <div class="item-text">
+                        <p>寶寶月亮圖案連身衣</p>
+                        <p>NT$390</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="item">
+                    <div class="item-pic">
+                        <img src="hotitem04.png" alt="" width="256px" height="272px">
+                    </div>
+                    <div class="item-text">
+                        <p>冰淇淋笑臉包屁衣</p>
+                        <p>NT$390</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="hot-item-container">
+            <a href="#">
+                <div class="item">
+                    <div class="item-pic">
+                        <img src="hotitem05.png" alt="" width="256px" height="272px">
+                    </div>
+                    <div class="item-text">
+                        <p>nice day印花短Ｔ</p>
+                        <p>NT$300</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="item">
+                    <div class="item-pic">
+                        <img src="hotitem06.png" alt="" width="256px" height="272px">
+                    </div>
+                    <div class="item-text">
+                        <p>滿版泰迪熊包屁衣</p>
+                        <p>NT$490</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="item">
+                    <div class="item-pic">
+                        <img src="hotitem07.png" alt="" width="256px" height="272px">
+                    </div>
+                    <div class="item-text">
+                        <p>恐龍英字印花套裝</p>
+                        <p>NT$590</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="item">
+                    <div class="item-pic">
+                        <img src="p06.png" alt="" width="256px" height="272px">
+                    </div>
+                    <div class="item-text">
+                        <p>粉嫩小花包屁衣</p>
+                        <p>NT$490</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="shop-now">
+        <a href=""><p>Shop Now</p></a>
+    </div>
+    <div class="top">
+        <img src="top.png" alt="" width="40px" height="40px">
+    </div>
+
+    <!-- 下方icon點選 -->
+    <div class="service-icon">
+        <div class="icon-user">
+            <a href="#"><i class="fa-solid fa-users"></i></a>
+            會員制度
+        </div>
+        <div class="icon-checklist">            
+            <a href="#"><i class="fa-solid fa-list"></i></a>
+            購買須知
+        </div>
+        <div class="icon-delivery">
+            <a href="#"><i class="fa-solid fa-truck"></i></a>
+            運送政策
+        </div>
+        <div class="icon-clothes">
+            <a href="#"><i class="fa-solid fa-shirt"></i></a>
+            衣物保養
+        </div>
+        <div class="icon-message">
+            <a href="#"><i class="fa-solid fa-comments"></i></a>
+            客服專線
+        </div>  
+    </div>
+
+    <!-- 頁尾 -->
+    <div class="main-footer">
+        <div class="footer">
+            <div class="footer-block">
+                <div class="=footer-item">
+                    <h4>SERVICE</h4>
+                    <div class="footer-list">
+                        <a href="#">服務條款</a>
+                        <a href="#">免責聲明</a>
+                        <a href="#">隱私權保護</a>
+                    </div>
+                </div>
+                <div class="=footer-item">
+                    <h4>CONTACT</h4>
+                    <div class="footer-list">
+                        <p>客服電話：(02) 2203-1234</p>
+                        <p>客服信箱:service@gmail.com</p>
+                        <p>客服時間:MON-FRI 09:00~18:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-icon">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-line"></i></a>
+            </div>
+        </div>
+    </div>

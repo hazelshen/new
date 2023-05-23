@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>嬰兒-產品列表</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+           
+        }
+         /* 導覽列 */
+         body{
+            padding-top: 200px;
+        }
+        .header{
+           position: fixed;
+           width: 100%;
+           background-color: white;
+           top: 0;
+           left: 0;
+           z-index: 2;    
+        }
+        .icon-container{
+            display: flex;
+            width: 1200px;
+            justify-content: flex-end;
+            padding: 10px;
+            margin: auto;
+        }
+        .icon-container .icon a{
+            color: #9B866A;
+            font-size: 20px;
+            letter-spacing: 10px;
+        }
+        .main-header{
+            display: flex;
+            width: 1200px;
+            align-items: center;
+            margin: auto;
+            margin-top:-50px;
+        }
+        .main-header .main-nav{
+            display: flex;
+            background-color: #F2E9DE;
+            padding: 10px;
+            width: 1053px;
+            border-radius: 0 100px 100px 0;
+            justify-content: space-around;
+            
+        }
+        .main-header .main-nav a{
+            text-decoration: none;
+            color: #9B866A;
+        }
+        .main-header .logo{
+            width: 100px;
+            z-index: 1;
+        }
+        /* 嬰兒 */
+        h2{
+            text-align: center;
+            padding: 20px;
+        }
+        h2 span{
+            font-size: 22px;
+        }
+        .product-item{
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            justify-content: space-around;
+        }
+        .product-item .all-item,.bodysuit,.one-piece,.others{
+            border: 1px solid #9B866A;
+            text-decoration: none;
+            color: #9B866A;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 16px;
+        }
+        .product-item a:hover{
+            background-color: #9B866A;
+            color: white;
+        }
+       
+        /* 產品列 */
+        .product-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .product-box .next-page{
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        .baby-product{
+            display: grid;
+            width: 1200px;
+            margin: auto;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 30px;
+        }
+        .product-info {
+            margin: auto;
+            padding-top: 25px;
+        }
+        .product-info .product-pic{
+            background-color: #F1E8DD;
+            padding: 12px;
+        }
+        .product-info img{
+            width: 220px;
+            height: 220px;
+        }
+        .product-info .product-text{
+            margin: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+         /* 碰到圖片放大 */
+         .product-pic{
+            overflow: hidden;
+        }
+        .product-pic img{
+            transform:scale(1,1);transition: all 1s ease-out;
+        }
+        .product-pic img:hover{
+            transform:scale(1.2,1.2);
+        }
+        /* 數量&加入購物車 */
+        .product-info .quantity{
+            display: flex;
+            width: 130px;
+            /* height:25px; */
+            margin: auto;
+            justify-content: space-around;
+            border: 1px solid #9B866A;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .quantity .minus,.plus{
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            padding-left: 3px;
+            padding-right: 3px;
+            font-size: 14px;
+            color: #9B866A;
+            /* border: 1px solid #9B866A; */
+
+        }
+        .quantity span{
+            color: #A0A0A0;
+            /* border: 1px solid #A0A0A0; */
+            /* width: 100px; */
+        }
+        .shopping-car{
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        .shopping-car .car{
+            border-color: #9B866A;;
+            padding: 4px;
+            background-color: rgba(0, 0, 0, 0);
+            border-radius: 5px;
+            color: #9B866A;
+            font-size: 14px;
+        }
+         /* top */
+         .top{
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            justify-content: flex-end;
+        }
+        /* 頁數 */
+        .next-page{
+            display: flex;
+            width: 1200px;
+        }
+        .next-page a{
+            text-decoration: none;
+            color: #9B866A;
+            letter-spacing: 8px;
+            font-size: 14px;
+        }
+        /* 下方icon點選 */
+        .service-icon{
+            display: flex;
+            /* width: 1200px; */
+            height: 100px;
+            margin: auto;
+            margin-top:100px;
+           
+        }
+        .service-icon .icon-user,.icon-checklist,.icon-delivery,.icon-clothes,.icon-message{
+            width: 25%;
+            box-sizing: border-box;
+            padding: 15px;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .service-icon .icon-user a,.icon-checklist a,.icon-delivery a,.icon-clothes a,.icon-message a{
+            text-decoration: none;
+            color:rgba(0,0,0,0.7);
+            padding: 5px;
+            font-size: 25px;
+        }
+        .icon-user{
+           background-color: #9B866A;
+        }
+        .icon-checklist{
+            background-color: #B99D77;
+        }
+        .icon-delivery{
+            background-color: #D8B594;
+        }
+        .icon-clothes{
+            background-color: #DAC8B6;
+        }
+        .icon-message{
+            background-color: #F1E8DD;
+        }
+        /* 頁尾 */
+        .main-footer{
+            background-color: #E6D6C7;
+            display: flex;
+            justify-content: space-around;
+        }
+        .footer{
+            width: 1200px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .footer .footer-block{
+            display: flex;
+            width: 400px;       
+            text-align: center;
+            text-decoration: none;
+            color: #9B866A;
+            line-height: 30px;
+            justify-content:space-between;
+            font-size: 14px;
+        }
+        h4{
+            color: #7D7D7D;
+        }
+        .footer-block .footer-list{
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-list a{
+            text-decoration: none;
+            color: #9B866A;
+        }
+        .footer-icon a{
+            color: #9B866A;
+            letter-spacing: 8px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+     <!-- 導覽列 -->
+     <header class="header">
+        <div class="icon-container">
+            <div class="icon">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="15-login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="15-cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-solid fa-comment"></i></a>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html" class="logo">
+                    <img src="logo02.svg" alt="baby">
+                </a> 
+            </div>
+                
+            <nav class="main-nav">
+                <a href="15-news&discount.html">最新消息</a>
+                <a href="#">本週新品</a>
+                <a href="15-babyproduct.html">嬰兒</a>
+                <a href="#">男童</a>
+                <a href="#">女童</a>
+                <a href="#">其他</a>
+                <a href="15-aboutus.html">關於我們</a>
+            </nav>
+        </div>
+    </header>
+    <!-- 嬰兒 -->
+    <h2>嬰兒<br><span>Baby</span></h2>
+    <div class="product-item">
+        <a href="#" class="all-item">全部商品</a>
+        <a href="#" class="bodysuit">包屁衣</a>
+        <a href="#" class="one-piece">連身衣&套裝</a>
+        <a href="#" class="others">其他</a>
+    </div>
+    <!-- 產品列 -->
+<div class="product-box">
+    <div class="baby-product">
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="15-product-info.html"><img src="p1.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <span>滿版熊熊包屁衣<br>NT$390</span>
+            </div>
+            <!-- 新增form -->
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="#"><img src="p2.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <span>藍莓包屁衣<br>NT$390</span>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="#"><img src="p3.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <p>華夫格牛仔藍套裝連身衣<br>NT$390</p>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="#"><img src="p4.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <p>可愛大眼寬版包屁衣<br>NT$390</p>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="#"><img src="p5.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <p>翻領熊熊條紋包屁衣<br>NT$490</p>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="#"><img src="p06.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <p>粉嫩小花包屁衣<br>NT$490</p>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="#"><img src="p7.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <p>春裝韓版公主風碎花包屁衣<br>NT$450</p>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="#"><img src="p8.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <p>小熊無袖純棉套裝<br>NT$380</p>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="#"><img src="p9.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <p>小熊維尼笑臉包屁衣<br>NT$299</p>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="#"><img src="p10.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <p>可愛米奇吊帶造型爬爬衣<br>NT$350</p>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="#"><img src="p11.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <p>可愛卡通圖案包屁衣<br>NT$299</p>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                 <a href="#"><img src="p12.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <p>四宮格唐老鴨包屁衣<br>NT$299</p>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="#"><img src="p13.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <p>可愛拚肩撞色吐司爬爬衣<br>NT$299</p>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="#"><img src="p14.png" alt="babysuit" width="220px" height="220px"></a>
+            </div>
+            <div class="product-text">
+                <p>小松鼠包屁衣<br>NT$390</p>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="#"><img src="p15.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <p>小圓弧領包屁衣<br>NT$350</p>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-info">
+            <div class="product-pic">
+                <a href="#"><img src="p16.png" alt="babysuit"></a>
+            </div>
+            <div class="product-text">
+                <p>可愛大眼寬版包屁衣<br>NT$390</p>
+            </div>
+            <form action="add-to-car">
+                <div class="quantity">
+                    <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
+                    <span>1</span>
+                    <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="shopping-car">
+                    <button type="submit" class="car">加入購物車</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="next-page">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+    </div>
+</div>
+
+    <!-- top -->
+    <div class="top">
+        <img src="top.png" alt="" width="40px" height="40px">
+    </div>
+    <!-- 下方icon點選 -->
+    <div class="service-icon">
+        <div class="icon-user">
+            <a href="#"><i class="fa-solid fa-users"></i></a>
+            會員制度
+        </div>
+        <div class="icon-checklist">            
+            <a href="#"><i class="fa-solid fa-list"></i></a>
+            購買須知
+        </div>
+        <div class="icon-delivery">
+            <a href="#"><i class="fa-solid fa-truck"></i></a>
+            運送政策
+        </div>
+        <div class="icon-clothes">
+            <a href="#"><i class="fa-solid fa-shirt"></i></a>
+            衣物保養
+        </div>
+        <div class="icon-message">
+            <a href="#"><i class="fa-solid fa-comments"></i></a>
+            客服專線
+        </div>  
+    </div>
+
+<!-- 頁尾 -->
+    <div class="main-footer">
+        <div class="footer">
+            <div class="footer-block">
+                <div class="=footer-item">
+                    <h4>SERVICE</h4>
+                    <div class="footer-list">
+                        <a href="#">服務條款</a>
+                        <a href="#">免責聲明</a>
+                        <a href="#">隱私權保護</a>
+                    </div>
+                </div>
+                <div class="=footer-item">
+                    <h4>CONTACT</h4>
+                    <div class="footer-list">
+                        <p>客服電話：(02) 2203-1234</p>
+                        <p>客服信箱:service@gmail.com</p>
+                        <p>客服時間:MON-FRI 09:00~18:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-icon">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-line"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
