@@ -77,30 +77,41 @@
             width: 100%;
             background-color: #F1E8DD;
             justify-content: center;
+            position: relative;
         }
         .aboutus-info{
-            display: flex;
+            /* display: flex; */
             width: 1200px;
-            justify-content: space-between
+            /* text-align: center; */
         }
         .aboutus-info p{
             width: 500px;
             letter-spacing: 3px;
+            padding: 20px;
             line-height: 30px;
-            margin-top: 70px;
-            margin-left: 40px;
+        }
+        .aboutus-content{
+            background-color: rgba(255, 255, 255, 0.6);
+            position: absolute;
+            top: 70px;
+            left: 200px;
+            border-radius: 5px;
+        
+            z-index: 1;
         }
         .aboutus-pic {
-            margin-top: 50px;
-            margin-bottom: 40px;
+            text-align:right;
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
         .pic-heart{
-            position: relative;
-            left: 520px;
-            top: 15px;
+            position: absolute;
+            left: 440px;
+            top: 280px;
         }
         .aboutus-pic img{
             border-radius: 5px;
+            margin-right: 20px;
         }
         /* 第二段 */
         .about-us{
