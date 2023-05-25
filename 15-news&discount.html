@@ -11,11 +11,18 @@
     <title>最新消息</title>
     
     <style>
+        @font-face {
+            font-family: 'JF';
+            src: url(pic/jf-openhuninn-2.0.ttf);
+        }
          *{
             margin: 0;
             padding: 0;
             font-family: 'Noto Sans TC', sans-serif;
+            
         }
+        /* font-family: 'JF',sans-serif;
+            src: url("pic/jf-openhuninn-2.0.ttf") */
         /* 導覽列 */
         body{
             padding-top: 200px;
@@ -86,7 +93,6 @@
             margin-bottom: 50px;
             margin-top: 50px;
             text-decoration: none;
-            color: black;
             /* border-bottom: 1px solid black ; */
         }
         
@@ -109,12 +115,15 @@
         }
         .newslist .news-title{
             font-size: 20px;
-            
+            color: #9B866A;
+            letter-spacing: 2px;
+            font-family: 'JF',sans-serif;
         }
         .newslist .news-time{
             font-size: 18px;
             margin: 10px;
             line-height: 40px;
+            color: black;
             /* border-bottom: 1px solid black; */
         }
          /* top */
@@ -219,7 +228,7 @@
         <div class="main-header">
             <div class="logo">
                 <a href="index.html" class="logo">
-                    <img src="logo02.svg" alt="baby">
+                    <img src="pic/logo02.svg" alt="baby">
                 </a> 
             </div>
                 
@@ -242,7 +251,7 @@
             <div class="newslist">
                 <a href="#">
                     <div class="news-pic">
-                        <img src="news01.svg" alt="news">
+                        <img src="pic/news01.svg" alt="news">
                     </div>
                     <div class="news-content">     
                         <p class="news-title">週年慶折扣活動</p><br>
@@ -255,7 +264,7 @@
             <div class="newslist">
                 <a href="#">
                     <div class="news-pic">
-                        <img src="news02.svg" alt="news">
+                        <img src="pic/news02.svg" alt="news">
                     </div>
                     <div class="news-content">
                         <p class="news-title">消費滿額贈</p><br>
@@ -268,7 +277,7 @@
             <div class="newslist">
                 <a href="#">
                     <div class="news-pic">
-                        <img src="news03.svg" alt="news">
+                        <img src="pic/news03.svg" alt="news">
                     </div>
                     <div class="news-content">
                         <p class="news-title">新品優惠</p><br>
@@ -280,7 +289,7 @@
             <div class="newslist">
                 <a href="#">
                     <div class="news-pic">
-                        <img src="news04.svg" alt="news">
+                        <img src="pic/news04.svg" alt="news">
                     </div>
                     <div class="news-content">
                         <p class="news-title">快樂連假 限時折滿額折扣碼</p><br>
@@ -291,7 +300,7 @@
         </div>
         <!-- top -->
         <div class="top">
-            <img src="top.png" alt="" width="40px" height="40px">
+            <img src="pic/top.png" alt="" width="40px" height="40px">
         </div>
     <!-- 下方icon點選 -->
         <div class="service-icon">
