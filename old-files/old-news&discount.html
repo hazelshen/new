@@ -8,9 +8,217 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/header&footer.css">
-    <link rel="stylesheet" href="css/news&discount.css">
-    <title>Bebé/news</title>
+    <title>最新消息</title>
+    
+    <style>
+        @font-face {
+            font-family: 'JF';
+            src: url(pic/jf-openhuninn-2.0.ttf);
+        }
+         *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+            
+        }
+        /* font-family: 'JF',sans-serif;
+            src: url("pic/jf-openhuninn-2.0.ttf") */
+        /* 導覽列 */
+        body{
+            padding-top: 200px;
+        }
+        .header{
+           position: fixed;
+           width: 100%;
+           background-color: white;
+           top: 0;
+           left: 0;
+            
+        }
+        .icon-container{
+            display: flex;
+            width: 1200px;
+            justify-content: flex-end;
+            padding: 10px;
+            margin: auto;
+        }
+        .icon-container .icon a{
+            color: #9B866A;
+            font-size: 20px;
+            letter-spacing: 10px;
+        }
+        .main-header{
+            display: flex;
+            width: 1200px;
+            align-items: center;
+            margin: auto;
+            margin-top:-50px;
+        }
+        .main-header .main-nav{
+            display: flex;
+            background-color: #F2E9DE;
+            padding: 10px;
+            width: 1053px;
+            border-radius: 0 100px 100px 0;
+            justify-content: space-around;
+            
+        }
+        .main-header .main-nav a{
+            text-decoration: none;
+            color: #9B866A;
+        }
+        .main-header .logo{
+            width: 100px;
+            z-index: 1;
+        }
+        /* 最新消息 */
+        h2{
+            text-align: center;
+            padding: 20px;
+        }
+        h2 span{
+            font-size: 22px;
+        }
+        .news-container{
+            display: flex;
+            margin: auto;
+            width: 1200px;
+            flex-direction: column;
+            padding: 100px;
+        }
+        .news-container .newslist a{
+            display: flex;
+            flex-direction:reverse;
+            justify-content: center;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            text-decoration: none;
+            /* border-bottom: 1px solid black ; */
+        }
+        
+        .newslist .news-pic{
+            margin-right: 150px;
+        }
+        .news-pic img{
+            width: 100%;
+        }
+        /* 水平線 */
+        hr{
+            width:1000px;
+            margin: auto;
+        }
+        .newslist .news-content{
+            font-size: 18px;
+            width: 500px;
+            /* border-bottom: 1px solid black; */
+            padding: 5px;
+        }
+        .newslist .news-title{
+            font-size: 20px;
+            color: #9B866A;
+            letter-spacing: 2px;
+            /* font-family: 'JF',sans-serif; */
+        }
+        .newslist .news-time{
+            font-size: 18px;
+            margin: 10px;
+            line-height: 40px;
+            color: black;
+            /* border-bottom: 1px solid black; */
+        }
+         /* top */
+         .top{
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            justify-content: flex-end;
+            
+        }
+        /* 下方icon點選 */
+        .service-icon{
+            display: flex;
+            /* width: 1200px; */
+            height: 100px;
+            margin: auto;
+            margin-top: 100px;
+        }
+        .service-icon .icon-user,.icon-checklist,.icon-delivery,.icon-clothes,.icon-message{
+            width: 25%;
+            box-sizing: border-box;
+            padding: 15px;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .service-icon .icon-user a,.icon-checklist a,.icon-delivery a,.icon-clothes a,.icon-message a{
+            text-decoration: none;
+            color:rgba(0,0,0,0.7);
+            padding: 5px;
+            font-size: 25px;
+        }
+        .icon-user{
+           background-color: #9B866A;
+        }
+        .icon-checklist{
+            background-color: #B99D77;
+        }
+        .icon-delivery{
+            background-color: #D8B594;
+        }
+        .icon-clothes{
+            background-color: #DAC8B6;
+        }
+        .icon-message{
+            background-color: #F1E8DD;
+        }
+        /* 頁尾 */
+        .main-footer{
+            background-color: #E6D6C7;
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 20px;
+        }
+        .footer{
+            width: 1200px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .footer .footer-block{
+            display: flex;
+            width: 400px;       
+            text-align: center;
+            text-decoration: none;
+            color: #9B866A;
+            line-height: 30px;
+            justify-content:space-between;
+            font-size: 14px;
+        }
+        h4{
+            color: #7D7D7D;
+        }
+        .footer-block .footer-list{
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-list a{
+            text-decoration: none;
+            color: #9B866A;
+        }
+        .footer-icon a{
+            color: #9B866A;
+            letter-spacing: 8px;
+            font-size: 20px;
+        }
+        .footer-notic{
+            color:#7D7D7D;
+            margin-top: 95px;
+            margin-left: 30px;
+            font-size: 14px;
+        }
+
+    </style>
 </head>
 <body>
     <!-- 導覽列 -->
@@ -155,5 +363,8 @@
             </div>
         </div>
     </div>
+    
+  
+    
 </body>
 </html>

@@ -1,0 +1,103 @@
+/* 會員登入 */
+.member-login{         
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #9B866A;
+    width: 750px;
+    height: 550px;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+.login-item{
+    border-bottom: 1px solid #9B866A;
+    display: flex;
+}
+.login-item .register,.login{
+    border: none;
+    background-color: rgba(0,0,0,0);
+    width: 385px;
+    height: 80px;
+    color: #9B866A;
+    font-size: 20px;
+}
+.login-item a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-item .login {
+    background-color: #9B866A;
+    color: white;
+}
+.socialmedia-login{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    /* background-color: pink; */
+}
+.line-login{
+    width: 280px;
+    height: 30px;
+    background-color: #1EC903;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    padding: 5px;
+}
+.fb-login{
+    width: 280px;
+    height: 30px;
+    background-color: #435EAA;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    padding: 5px;
+}
+.line-login .line-icon,.fb-login .fb-icon{
+    border: none;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0);
+    color: white
+}
+.line-login a,.fb-login a{
+    text-decoration: none;
+    color: white;
+}
+.login-info{
+    color: #9B866A;
+    padding: 20px;
+    font-size: 20px;
+}
+.account input,.password input{
+    border:none;
+    width: 400px;
+    height: 30px;
+    background-color:#F2E9DE;
+    border-radius: 3px;
+    margin: 10px;
+    letter-spacing: 3px;
+    padding-left: 10px;
+}
+::placeholder{
+    color: #9B866A;
+    text-indent: 0.5em;
+}
+.start-shopping .start{
+    border: 1px solid #9B866A;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0);
+    color: #9B866A;
+    font-size: 18px;
+}
+.forget-password{
+    margin:20px;
+}
+.forget-password a{
+    text-decoration: none;
+    color: #9B866A;
+    font-size: 14px;
+}
