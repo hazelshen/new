@@ -25,6 +25,7 @@
             height: 700px;
             width: 100%;
             background-repeat: no-repeat;
+            background-position: center center;
         }
         .icon-container{
             display: flex;
@@ -64,28 +65,31 @@
         }
         /* 空間 */
         .index-event{
-            width: 1200px;
-            padding-top: 120px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: auto;
+            background-image: url(pic/index01.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            min-height: 700px;
+            margin-top: 120px;
+            background-position: center center;
         }
         /* 首頁活動 */
         .event-container{
-            display: flex;
+            display:flex;
             width: 1200px;
             justify-content: space-around;
-            margin-top: -450px;
             text-align: center;
+            margin: auto;
         }
         h2{
             line-height: 40px;
             letter-spacing: 5px;
             font-weight:bolder;
         }
+        .event-content{
+            margin-top: 180px;
+        }
         .event-content p{
-            padding-top: 45px;
+            margin-top: 45px;
             line-height: 30px;
             font-size: 20px;
         }
@@ -95,10 +99,11 @@
         /* 活動圖片 */
         .event-pic-first img{
             border-radius: 15px;
+            margin-top: 150px;
         }
         .event-pic-second img{
             border-radius: 15px;
-            margin-top: -200px;
+            margin-top: -10px;
         }
         /* 最新商品 */
         .new-arrival{
@@ -175,42 +180,53 @@
         }
         /* 照片分享 */
         .sharing{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+        .sharing-card{
+            width: 1200px;
+            margin: auto;
             position: relative;
-            padding-bottom: 80px;
+        }
+        .sharing-box{
+            background-image: url(pic/index17.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            min-height: 620px;
+            background-position: center center;
         }
         .rainbow img{
             position: absolute;
+            left: 700px;
             top: 100px;
-            left: 780px;
             transform:rotate(15deg);
         }
         /* 圖片輪播 */
-        .sharing-box{
+        .owl-carousel{
             display: flex;
             width: 1200px;
-            flex-direction: column;
-            align-items: center;
             margin: auto;
-            position: relative;
-            
+            padding-top: 110px;
         }
         .sharing-box .owl-carousel img{
             border-radius: 5px;            
         }
-        .background-sharing img{
-            position: absolute;
-            top: -80px;
-            left: -120px;
-        }
         /* 最新消息 */
         .news{
-            padding-bottom: 80px;
+            display: flex;
+            flex-direction: column;
+            width: 1200px;
+            margin: auto;
             position: relative;
+        }
+        .news h3{
+            padding-bottom: 50px;
         }
         .balloon img{
             position: absolute;
             top: 55px;
-            left: 560px;
+            left: 450px;
             transform:rotate(-15deg);
         }
         .news-box{
@@ -218,7 +234,7 @@
             width: 1200px;
             margin: auto;
             justify-content: space-around;
-            padding-bottom: 80px;
+            padding-bottom: 50px;
         }
         .news-box a{
             text-decoration: none;
@@ -236,14 +252,20 @@
         }
         /* 人氣商品 */
         .hot-item{
-            padding-bottom: 120px;           
-            position: relative;
+            margin-top: 100px;
+            padding-bottom: 120px;
+            /* position: relative; */
             background-color:#FCE1E0;
+        }
+        .hot-item-top{
+            position: relative;
+            width: 1200px;
+            margin: auto;
         }
         .bubble img{
             position: absolute;
             top: 70px;
-            left: 780px;
+            left: 700px;
             transform:rotate(10deg);
         }
         .hot-item-box{
@@ -426,8 +448,8 @@
     </header>
     <!-- 首頁活動 -->
     <div class="index-event">
-        <div class="background-space">
-            <img src="pic/index01.png" alt="">
+        <div class="background">
+            <img src="" alt="">
         </div>
         <div class="event-container">        
             <div class="event-content">
@@ -498,21 +520,23 @@
     </div>
     <!-- 照片分享＆圖片輪播 -->
     <div class="sharing">
-        <h3>Sharing</h3>
-        <div class="rainbow">
-            <img src="pic/rainbow.png" alt="" width="73px" height="73px">
+        <div class="sharing-card">
+            <div class="rainbow">
+                <img src="pic/rainbow.png" alt="" width="73px" height="73px">
+            </div>
+            <h3>Sharing</h3>
         </div>
-    </div>
-    <div class="sharing-box">
-        <div class="background-sharing">
-            <img src="pic/index17.png" alt="">
-        </div>
-        <div class="owl-carousel owl-theme">
-            <img src="pic/index12.png" alt="" width="400px" height="300px">
-            <img src="pic/index14.png" alt="" width="400px" height="300px">
-            <img src="pic/index06.png" alt="" width="400px" height="300px">
-            <img src="pic/index07.png" alt="" width="400px" height="300px">
-            <img src="pic/index08.png" alt="" width="400px" height="300px">
+        <div class="sharing-box">
+            <div class="background">
+                <img src="" alt="">
+            </div>
+            <div class="owl-carousel owl-theme">
+                <img src="pic/index12.png" alt="" width="400px" height="300px">
+                <img src="pic/index14.png" alt="" width="400px" height="300px">
+                <img src="pic/index06.png" alt="" width="400px" height="300px">
+                <img src="pic/index07.png" alt="" width="400px" height="300px">
+                <img src="pic/index08.png" alt="" width="400px" height="300px">
+            </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -543,37 +567,39 @@
         <div class="balloon">
             <img src="pic/balloon.png" alt="" width="92px" height="114px">
         </div>
-        <h3>News</h3>
-    </div>
-    <div class="news-box">
-        <a href="15-news&discount.html">
-            <div class="news-anniv">
-            <img src="pic/index-new01.png" alt="" width="316px" height="316px">
-            <p>歡慶週年慶</p>
-            <span class="time">2023/05/05</span>
-            </div>
-        </a>
-        <a href="15-news&discount.html">
-            <div class="news-freegift">
-                <img src="pic/index-new02.png" alt="" width="316px" height="316px">
-                <p>消費滿額贈</p>
-                <span class="time">2023/05/10</span>
-            </div>
-        </a>
-        <a href="15-news&discount.html">
-            <div class="news-newarrival">
-                <img src="pic/index-new03.png" alt="" width="316px" height="316px">
-                <p>新品優惠</p>
-                <span class="time">2023/05/15</span>
-            </div>
-        </a>
+        <h3>News</h3>    
+        <div class="news-box">
+            <a href="15-news&discount.html">
+                <div class="news-anniv">
+                <img src="pic/index-new01.png" alt="" width="316px" height="316px">
+                <p>歡慶週年慶</p>
+                <span class="time">2023/05/05</span>
+                </div>
+            </a>
+            <a href="15-news&discount.html">
+                <div class="news-freegift">
+                    <img src="pic/index-new02.png" alt="" width="316px" height="316px">
+                    <p>消費滿額贈</p>
+                    <span class="time">2023/05/10</span>
+                </div>
+            </a>
+            <a href="15-news&discount.html">
+                <div class="news-newarrival">
+                    <img src="pic/index-new03.png" alt="" width="316px" height="316px">
+                    <p>新品優惠</p>
+                    <span class="time">2023/05/15</span>
+                </div>
+            </a>
+        </div>
     </div>
 
     <!-- 人氣商品 -->
     <div class="hot-item">
-        <h3>Hot Sale Item</h3>
-        <div class="bubble">
-            <img src="pic/bubble.png" alt="" width="145px" height="97">
+        <div class="hot-item-top">
+            <h3>Hot Sale Item</h3>
+            <div class="bubble">
+                <img src="pic/bubble.png" alt="" width="145px" height="97">
+            </div>
         </div>
     </div>
     <div class="hot-item-box">
