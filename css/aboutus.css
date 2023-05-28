@@ -91,10 +91,3 @@ h2 span{
 .icon-ig img:hover{
     transform:rotate(15deg);
 }
-/* top */
-.top{
-    display: flex;
-    width: 1200px;
-    margin: auto;
-    justify-content: flex-end;
-}

@@ -26,6 +26,10 @@
     color: #797777;
     margin-right: 20px;
 }
+.breadcrumb li:hover{
+    transform:scale(1.1,1.1);
+}
+
 /* 產品圖片 */
 .box{
     display: flex;
@@ -44,8 +48,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(min-content, 1fr);
     gap: 5px;
-    /* background-color: rgb(192, 153, 126);
-    border: 1px solid black;  */
 }
 .picture-box :first-child{
     grid-area: 1/1/2/-1;
@@ -125,11 +127,4 @@
 .detail ul{
     padding-top: 50px;
     font-size: 14px;
-}
-/* top */
-.top{
-    display: flex;
-    width: 1200px;
-    margin: auto;
-    justify-content: flex-end;
 }

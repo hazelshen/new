@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <!-- css -->
     <link rel="stylesheet" href="css/header&footer.css">
-    <link rel="stylesheet" href="css/news&discount.css">
+    <link rel="stylesheet" href="css/news-copy.css">
+    <!-- logo -->
+    <link rel="icon" href="pic/logo.ico" type="image/x-icon" >
     <title>Bebé/news</title>
 </head>
 <body>
@@ -51,7 +56,8 @@
                     <div class="news-pic">
                         <img src="pic/news01.svg" alt="news">
                     </div>
-                    <div class="news-content">     
+                    <div class="news-content">
+                        <p calss="data">2023/05/05</p>     
                         <p class="news-title">週年慶折扣活動</p><br>
                         <p class="news-time">活動期間:2023/05/01-2023/05/05<br>單筆訂單滿$1500輸入折扣碼即可享有優惠!</p>
                     </div>
@@ -65,6 +71,7 @@
                         <img src="pic/news02.svg" alt="news">
                     </div>
                     <div class="news-content">
+                        <p calss="data">2023/05/10</p>
                         <p class="news-title">消費滿額贈</p><br>
                         <p class="news-time">活動期間:2023/05/01-2023/05/14<br>單筆訂單滿$1500即贈品牌提袋!</p>
                     </div>
@@ -78,6 +85,7 @@
                         <img src="pic/news03.svg" alt="news">
                     </div>
                     <div class="news-content">
+                        <p calss="data">2023/05/15</p>
                         <p class="news-title">新品優惠</p><br>
                         <p class="news-time">活動期間:2023/05/15-2023/05/17<br>全館新品單件95折!</p>
                     </div>
@@ -90,16 +98,14 @@
                         <img src="pic/news04.svg" alt="news">
                     </div>
                     <div class="news-content">
+                        <p calss="data">2023/05/20</p>
                         <p class="news-title">快樂連假 限時折滿額折扣碼</p><br>
                         <p class="news-time">活動期間:2023/05/01-2023/05/03<br>單筆訂單滿$2000輸入折扣碼即可享有優惠!</p>
                     </div>
                 </a>
             </div>
         </div>
-        <!-- top -->
-        <div class="top">
-            <img src="pic/top.png" alt="" width="40px" height="40px">
-        </div>
+        
     <!-- 下方icon點選 -->
         <div class="service-icon">
             <div class="icon-user">
@@ -155,5 +161,27 @@
             </div>
         </div>
     </div>
+
+    <!-- top按鈕 -->
+    <button onclick="topFunction()" id="myBtn" title="Gotop"><img src="pic/top.png" width="40px" height="40px"></button> 
+    
+    <!-- top按鈕 -->
+    <script>
+        window.onscroll = scrollFunction; //每當畫面捲動觸發一次
+
+        function scrollFunction() { 
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+        }//網頁捲動超過200pixel就會跑出來 display設定成block 跑回上面就隱藏。
+
+        // 重置scrollTop這個變數的值
+        function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
 </body>
 </html>

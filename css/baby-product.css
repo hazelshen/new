@@ -11,18 +11,35 @@ h2 span{
     width: 1200px;
     margin: auto;
 }
-.product-item .all-item,.bodysuit,.one-piece,.others{
+.nav-item {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
     text-decoration: none;
     color: #9B866A;
-    margin-top: 20px;
     margin-left: 50px;
+    margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 16px;
-}
-.product-item a:hover{
-    border-bottom: 1px solid #9B866A;
+  }
+  .nav-item:hover{
     transform:scale(1.2,1.2);
-}
+  }
+  
+  .nav-item:before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background-color: #9B866A;
+    transition: width 0.3s;
+  }
+  
+  .nav-item:hover:before {
+    width: 100%;
+    transform:scale(1.2,1.2);
+  }
 
 /* 產品列 */
 .product-box{
@@ -110,13 +127,7 @@ h2 span{
     color: #9B866A;
     font-size: 14px;
 }
- /* top */
- .top{
-    display: flex;
-    width: 1200px;
-    margin: auto;
-    justify-content: flex-end;
-}
+ 
 /* 頁數 */
 .next-page{
     display: flex;

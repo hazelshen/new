@@ -200,10 +200,4 @@ h3{
     padding-top: 10px;
     font-size: 14px;
 }
- /* top */
- .top{
-    display: flex;
-    width: 1200px;
-    margin: auto;
-    justify-content: flex-end;
-}
+ 
