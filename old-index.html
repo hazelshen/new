@@ -4,20 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <!-- goole font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <!-- css -->
+    <link rel="stylesheet" href="owl/assets/owl.carousel.css">
+    <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/index-header&footer.css">
     <link rel="stylesheet" href="css/index.css">
-    <!-- 輪播 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Bebé童裝服飾</title>
 
 </head>
@@ -146,7 +140,29 @@
             </div>
         </div>
     </div>
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="owl/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+            items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+    }
+    });
+        });
+    </script>
     <!-- 最新消息 -->
     <div class="news">
         <div class="balloon">
@@ -284,6 +300,10 @@
     <div class="shop-now">
         <a href="15-babyproduct.html"><p>Shop Now</p></a>
     </div>
+    <div class="top">
+        <img src="pic/top.png" alt="" width="40px" height="40px">
+    </div>
+
     <!-- 下方icon點選 -->
     <div class="service-icon">
         <div class="icon-user">
@@ -339,48 +359,4 @@
             </div>
         </div>
     </div>
-    <div class="back-top hide" title="回頂部"></div>
-    <!-- 圖片輪播 -->
-    <script>
-        var owl = $('.owl-carousel');
-        owl.owlCarousel({
-            items:3,
-            loop:true,
-            margin:10,
-            autoplay:true,
-            autoplayTimeout:2000,
-            autoplayHoverPause:true
-        });
-        $('.play').on('click',function(){
-            owl.trigger('play.owl.autoplay',[1000])
-        })
-        $('.stop').on('click',function(){
-            owl.trigger('stop.owl.autoplay')
-        })
-    </script>
-    <!-- top按鈕 -->
-    <script>
-        $(document).ready(function () {
-        // 捲軸偵測距離頂部超過 50 才顯示按鈕
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 50) {
-            if ($(".back-top").hasClass("hide")) {
-                $(".back-top").toggleClass("hide");
-            }
-            } else {
-            $(".back-top").addClass("hide");
-            }
-        });
-
-        // 點擊按鈕回頂部
-        $(".back-top").on("click", function (event) {
-            $("html, body").animate(
-            {
-                scrollTop: 0
-            },
-            500 // 回頂部時間為 500 毫秒
-            );
-        });
-        });
-    </script>
 </body>
