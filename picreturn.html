@@ -7,8 +7,8 @@
     <title>Document</title>
     <style>
         .coverflow{
-    width: 700px;
-    height: 490px;
+    width: 400px;
+    height: 300px;
     position: relative;
 }
 
@@ -60,6 +60,14 @@
 }
 
 /*每個圖片各延遲5秒*/
+.coverflow>a:nth-child(5) {
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s;               
+}
+.coverflow>a:nth-child(4) {
+    -webkit-animation-delay: 15s;
+            animation-delay: 15s;               
+}
 .coverflow>a:nth-child(3) {
     -webkit-animation-delay: 10s;
             animation-delay: 10s;               
