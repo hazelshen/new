@@ -21,7 +21,7 @@ h2 span{
 }
 .product-item a:hover{
     border-bottom: 1px solid #9B866A;
-    transform:scale(1.2,1.2)
+    transform:scale(1.2,1.2);
 }
 
 /* 產品列 */
@@ -65,7 +65,7 @@ h2 span{
     overflow: hidden;
 }
 .product-pic img{
-    transform:scale(1,1);transition: all 1s ease-out;
+    transform:scale(1,1);transition: all 0.8s ease-out;
 }
 .product-pic img:hover{
     transform:scale(1.2,1.2);

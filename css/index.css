@@ -82,6 +82,9 @@ h3{
     transform:rotate(15deg);
     margin-left: 70px;
 }
+.new-arrival-theme img:hover{
+    transform:rotate(-8deg);
+}
 /* 全站好康＆好禮 */
 .discount{
     display: flex;

@@ -1,6 +1,8 @@
 /* 麵包屑 */
 .product-content{
     padding: 10px 0;
+    width: 1200px;
+    margin: auto;
 }
 .breadcrumb{
     width: 90%;
@@ -39,7 +41,7 @@
 .picture-box{
     display: grid;
     /* height: 650px; */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(min-content, 1fr);
     gap: 5px;
     /* background-color: rgb(192, 153, 126);

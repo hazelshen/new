@@ -19,11 +19,11 @@ h2 span{
     justify-content: space-between
 }
 .aboutus-info p{
-    width: 500px;
+    width: 480px;
     letter-spacing: 3px;
     line-height: 30px;
-    margin-top: 70px;
-    margin-left: 40px;
+    margin-top: 90px;
+    margin-left: 70px;
 }
 .aboutus-pic {
     margin-top: 50px;
@@ -84,6 +84,12 @@ h2 span{
     margin-left: 400px;
     margin-top: -200px;
     transform:rotate(-5deg);
+}
+.icon-fb img:hover{
+    transform:rotate(15deg);
+}
+.icon-ig img:hover{
+    transform:rotate(15deg);
 }
 /* top */
 .top{

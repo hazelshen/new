@@ -54,13 +54,13 @@
 <div class="box">
     <div class="product-container">
         <div class="picture-box">
-            <img id="large" src="pic/p06.png" alt="product" width="660px" height="490px">
-            <img class="small" src="pic/in01.png" alt="product" width="160px" height="167px">
-            <img class="small" src="pic/in02.png" alt="product" width="160px" height="167px">
-            <img class="small" src="pic/in03.png" alt="product" width="160px" height="167px">
-            <img class="small" src="pic/p06.png" alt="product" width="160px" height="167px">
+            <!-- <div class="product-pic"> -->
+            <div class="big-image"><img src="pic/p06.png" alt="product" width="645px" height="490px"></div>
+            <div class="small-image"><img src="pic/in01.png" alt="product" width="210px" height="167px"></div>
+            <div class="small-image"><img src="pic/in02.png" alt="product" width="210px" height="167px"></div>
+            <div class="small-image"><img src="pic/in03.png" alt="product" width="210px" height="167px"></div>
+            <!-- </div> -->
         </div>
-        
         <div class="information">
             <div class="product-text">
                 <span class="product-name">粉嫩小花包屁衣｜含髮帶</span><br>
@@ -176,22 +176,6 @@
             <a href="#"><i class="fa-brands fa-line"></i></a>
         </div>
     </div>
-</div>      
-<!-- 大圖換小圖 -->
-<script>
-    function showLarge(e){
-     //let small = e.target;
-     //document.getElementById("large").src = small.src;
-     document.getElementById("large").src = e.target.src;
-     }
-
-     function init(){
-         let imgs = document.getElementsByClassName("small");
-         for(let i=0; i<imgs.length; i++){
-             imgs[i].onclick = showLarge;
-         }
-     }
-     window.addEventListener("load", init, false);
- </script>      
+</div>            
 </body>
 </html>
