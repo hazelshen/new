@@ -11,8 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <!-- css -->
-    <link rel="stylesheet" href="css/header&footer.css">
+    <link rel="stylesheet" href="css/new-header&footer.css">
     <link rel="stylesheet" href="css/product-info.css">
+    <!-- 輪播 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- logo -->
     <link rel="icon" href="pic/logo.ico" type="image/x-icon" >
     <title>Bebé/product-info</title>
@@ -20,33 +25,38 @@
 </head>
 <body>
    <!-- 導覽列 -->
-   <header class="header">
+   <input type="checkbox" name="" id="menu-control">
+    <header class="header">
         <div class="icon-container">
             <div class="icon">
                 <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                 <a href="15-login.html"><i class="fa-solid fa-user"></i></a>
                 <a href="15-cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="#"><i class="fa-solid fa-comment"></i></a>
             </div>
         </div>
         <div class="main-header">
             <div class="logo">
-                <a href="index.html" class="logo">
+                <a href="index.html">
                     <img src="pic/logo02.svg" alt="baby">
                 </a> 
             </div>
                 
-            <nav class="main-nav">
-                <a href="15-news&discount.html">最新消息</a>
-                <a href="#">本週新品</a>
-                <a href="15-babyproduct.html">嬰兒</a>
-                <a href="#">男童</a>
-                <a href="#">女童</a>
-                <a href="#">其他</a>
-                <a href="15-aboutus.html">關於我們</a>
+            <nav>
+                <a href="15-news.html">News</a>
+                <a href="#">New Arrival</a>
+                <a href="15-babyproduct.html">Baby</a>
+                <a href="#">Boy</a>
+                <a href="#">Girl</a>
+                <a href="#">Other</a>
+                <a href="15-aboutus.html">About</a>
             </nav>
+            <label for="menu-control" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
-    </header>
+    </header> 
 <!-- 麵包屑 -->
     <div class="product-content">
         <ol class="breadcrumb">
@@ -59,11 +69,17 @@
     <div class="box">
         <div class="product-container">
             <div class="picture-box">
-                <img id="large" src="pic/p06.png" alt="product" width="660px" height="490px">
-                <img class="small" src="pic/in01.png" alt="product" width="160px" height="167px">
-                <img class="small" src="pic/in02.png" alt="product" width="160px" height="167px">
-                <img class="small" src="pic/in03.png" alt="product" width="160px" height="167px">
-                <img class="small" src="pic/p06.png" alt="product" width="160px" height="167px">
+                <img id="large" src="pic/p06.png" alt="product">
+                <img class="small" src="pic/in01.png" alt="product">
+                <img class="small" src="pic/in02.png" alt="product">
+                <img class="small" src="pic/in03.png" alt="product">
+                <img class="small" src="pic/p06.png" alt="product">    
+            </div>
+            <div class="owl-carousel owl-theme" id="carousel">
+                <img id="large" src="pic/p06.png" alt="product">
+                <img class="small" src="pic/in01.png" alt="product">
+                <img class="small" src="pic/in02.png" alt="product">
+                <img class="small" src="pic/in03.png" alt="product">
             </div>
             
             <div class="information">
@@ -73,28 +89,30 @@
                     <span class="product-price">NT$390</span>
                 </div>
                 
-                <form action="add-to-car">
+                <form>
                     <div class="color-option">
                         <span class="color">顏色</span><br>
-                        <button type="button" name="color" value="red">黃色</button>
-                        <button type="button" name="color" value="green">綠色</button>
+                        <button name="color" value="yellow">黃色</button>
+                        <button name="color" value="green">綠色</button>
                     </div>
                     <div class="size-option">
                         <span class="size">尺寸</span><br>
-                        <button type="button" name="size" value="small">66</button>
-                        <button type="button" name="size" value="medium">73</button>
-                        <button type="button" name="size" value="large">80</button>
-                        <button type="button" name="size" value="large">90</button>
+                        <button name="size" value="small">66</button>
+                        <button name="size" value="medium">73</button>
+                        <button name="size" value="large">80</button>
+                        <button name="size" value="large">90</button>
                     </div>
                     <div class="quantity-option">
                         <span class="quantity">數量</span><br>
-                        <button type="button" name="size" value="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" name="size" value="plus"><i class="fa-solid fa-plus"></i></button>
+                        <div class="option-box">
+                        <button type="button" name="quantity" value="minus" onclick="decreaseQuantity()"><i class="fa-solid fa-minus"></i></button>
+                        <span id="quantity">1</span>
+                        <button type="button" name="quantity" value="plus" onclick="increaseQuantity()"><i class="fa-solid fa-plus"></i></button>
+                        </div>
                     </div>
                     <div class="buy-option">
-                        <button type="submit" name="shoppingcar" value="putin">加入購物車</button>
-                        <button type="submit" name="buynow" value="buy">直接購買</button>
+                        <button class="add" type="button" name="action" value="putin" onclick="addToCart()">加入購物車</button>
+                        <button class="buy" type="submit" name="action" value="buy">直接購買</button>
                     </div>
                 </form>
             </div>
@@ -102,7 +120,6 @@
         <div class="detail">
             <div class="size-chart">
                 <span>尺寸表</span>
-                
                 <div class="size-pic">
                     <img src="pic/size.png" alt="尺寸表">
                 </div>
@@ -160,7 +177,7 @@
                         <a href="#">隱私權保護</a>
                     </div>
                 </div>
-                <div class="=footer-item">
+                <div class="footer-item">
                     <h4>CONTACT</h4>
                     <div class="footer-list">
                         <p>客服電話：(02) 2203-1234</p>
@@ -169,53 +186,29 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-notic">
-                <p>本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</p>
-            </div>
-            <div class="footer-icon">
-                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-line"></i></a>
+            <div class="icon-box">
+                <div class="footer-icon">
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-line"></i></a>
+                </div>
+                <div class="footer-notic">
+                    <p>本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</p>
+                </div>
             </div>
         </div>
     </div>
      <!-- top按鈕 -->
      <button onclick="topFunction()" id="myBtn" title="Gotop"><img src="pic/top.png" width="40px" height="40px"></button> 
 
-    <!-- 大圖換小圖 -->
-    <script>
-        function showLarge(e){
-        //let small = e.target;
-        //document.getElementById("large").src = small.src;
-        document.getElementById("large").src = e.target.src;
-        }
-
-        function init(){
-            let imgs = document.getElementsByClassName("small");
-            for(let i=0; i<imgs.length; i++){
-                imgs[i].onclick = showLarge;
-            }
-        }
-        window.addEventListener("load", init, false);
-    </script>
+  
     
-    <!-- top按鈕 -->
+    <script src="js/top.js"></script>
+    <script src="js/product-info.js"></script>
+    
+    <!-- 圖片輪播 -->
     <script>
-        window.onscroll = scrollFunction; //每當畫面捲動觸發一次
-
-        function scrollFunction() { 
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            document.getElementById("myBtn").style.display = "block";
-        } else {
-            document.getElementById("myBtn").style.display = "none";
-        }
-        }//網頁捲動超過200pixel就會跑出來 display設定成block 跑回上面就隱藏。
-
-        // 重置scrollTop這個變數的值
-        function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
+        
     </script>
 </body>
 </html>

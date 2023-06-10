@@ -1,7 +1,7 @@
 /* 麵包屑 */
 .product-content{
     padding: 10px 0;
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
 }
 .breadcrumb{
@@ -31,37 +31,14 @@
 }
 
 /* 產品圖片 */
-.box{
-    display: flex;
-    flex-direction: column;
-    width: 1200px;
-    margin: auto;
-}
-.product-container{
-    display: flex;
-    margin: auto;
-    padding-top: 70px;
-}
-.picture-box{
-    display: grid;
-    /* height: 650px; */
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(min-content, 1fr);
-    gap: 5px;
-}
-.picture-box :first-child{
-    grid-area: 1/1/2/-1;
-}
+
 /* 包圖片＋文字介紹 */
 .product-text{
     display: flex;
-    flex-direction: column;
-    padding-left: 50px;
+    flex-direction: column;    
     line-height: 30px;
-    /* border-bottom: 1px solid black; */
 }
 .product-text .product-name{
-    text-align: center;
     font-size: 22px;
 }
 .product-text .product-info{
@@ -74,46 +51,40 @@
     display: flex;
     flex-direction: column;
     line-height: 30px;
-    padding: 50px;
 }
 .information span{
     font-size: 16px;
 }
 .information button{
     font-size: 14px;
-    border:1px solid #9B866A;
+    border:1px solid hsl(34, 20%, 51%,0.6);
     background-color: white;
     border-radius: 5px;
     padding: 5px;
     letter-spacing: 2px;
-    margin-top: 8px;  
 }
 .information .buy-option,.quantity-option,.size-option,.color-option{
     margin-top: 18px;
 }
 .information .quantity-option button{
     border: none;
-    padding-top: 10px;
+    cursor: pointer;
 }
-.information button:hover{
-    color:white;
+.buy-option .add{
     background-color: #9B866A;
+    color: white;
 }
+.buy-option .buy{
+    background-color: #D8B594;
+    border-color: #D8B594;
+    color: white;
+}
+
 /* 尺寸表 */
-.detail{
-    display: flex;
-    margin: auto;
-    width: 1200px;
-    padding-top: 100px;
-    justify-content: space-around;
-}
 .size-chart, .methods-option{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.methods-option{
-    padding-right: 150px;
 }
 .detail span{
     padding-bottom: 10px;
@@ -127,4 +98,119 @@
 .detail ul{
     padding-top: 50px;
     font-size: 14px;
+}
+@media screen and (max-width:767px) {
+    /* 圖片輪播 */
+    .owl-carousel{
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    .owl-carousel img{
+        width: 350px;
+        height: 300px;            
+    }
+    .picture-box{
+        display: none;
+    }
+    /* 文字介紹 */
+    .product-text{
+        box-sizing: border-box;
+        padding-left: 20px;
+    }
+    .information form{
+        box-sizing: border-box;
+        padding-left: 20px;
+    }
+    .option-box{
+        display: flex;
+        max-width: 350px;
+        margin-top: 8px;
+        justify-content: space-between;
+        border: 1px solid #9B866A;
+        border-radius: 5px;
+    }
+    .color-option button,.size-option button{
+        margin-top: 8px;
+    }
+    .buy-option{
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+    }
+    .buy-option button{
+        margin-top: 20px;
+    }
+    /* 尺寸表 */
+    .detail span{
+        box-sizing: border-box;
+        padding-top: 80px;
+    }
+}
+@media screen and (min-width:768px){
+   #carousel{
+        display: none;
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .picture-box{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(min-content, 1fr);
+        gap: 5px;
+    }
+    .product-container{
+        display: flex;
+        margin: auto;
+        padding-top: 70px;
+    } 
+    .picture-box :first-child{
+        grid-area: 1/1/2/-1;
+    }
+    #large{
+        width: 660px;
+        height: 490px;
+    }
+    .picture-box .small{
+        width: 160px;
+        height: 167px;
+    }
+    /* 文字介紹 */
+    .product-text{
+        box-sizing: border-box;
+        padding-left: 50px;
+    }
+    .information form{
+        box-sizing: border-box;
+        padding: 50px;
+    }
+    .information button{
+        margin-top: 8px;
+        margin-right: 2px;
+    }.buy-option .add,.buy{
+        width: 100px;
+    }
+    .color-option button:hover,
+    .size-option button:hover{
+        border-width: 2px;
+        border-color: #9B866A;
+        cursor: pointer;
+    }
+    .buy-option button:hover{
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    /* 尺寸表 */
+    .detail{
+        display: flex;
+        margin: auto;
+        max-width: 1200px;
+        padding-top: 100px;
+    }
+    .size-chart, .methods-option{
+        margin-right: 100px;
+    }
 }

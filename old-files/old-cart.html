@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <!-- css -->
-    <link rel="stylesheet" href="css/new-header&footer.css">
+    <link rel="stylesheet" href="css/header&footer.css">
     <link rel="stylesheet" href="css/cart.css">
     <!-- logo -->
     <link rel="icon" href="pic/logo.ico" type="image/x-icon" >
@@ -20,7 +20,6 @@
 </head>
 <body>
     <!-- 導覽列 -->
-    <input type="checkbox" name="" id="menu-control">
     <header class="header">
         <div class="icon-container">
             <div class="icon">
@@ -36,8 +35,8 @@
                 </a> 
             </div>
                 
-            <nav>
-                <a href="15-news.html">News</a>
+            <nav class="main-nav">
+                <a href="15-news&discount.html">News</a>
                 <a href="#">New Arrival</a>
                 <a href="15-babyproduct.html">Baby</a>
                 <a href="#">Boy</a>
@@ -45,13 +44,8 @@
                 <a href="#">Other</a>
                 <a href="15-aboutus.html">About</a>
             </nav>
-            <label for="menu-control" class="menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
         </div>
-    </header> 
+    </header>
     <!-- 結帳順序 -->
     <div class="check-nav">
         <ol class="list">
@@ -61,9 +55,9 @@
         </ol>
         <div class="box">
             <div class="text">
-                <span class="cart">購物車</span>
-                <span class="fillin">填寫資料</span>
-                <span class="confirm">訂單確認</span>
+                <span>購物車</span>
+                <span>填寫資料</span>
+                <span>訂單確認</span>
             </div>
         </div>
     </div>
@@ -82,16 +76,13 @@
 
         <!-- 商品明細1 -->
         <div class="product-list">
-            <div class="forphone">
-                <div class="product-pic">
-                    <img src="pic/07-390.png" width="68" height="71" alt="">
-                </div>
-                <div class="product-name">
-                    <span>夏款撞色拼接袖手足套裝</span><br>
-                    <span class="size">尺寸:80</span>
-                </div>
+            <div class="product-pic">
+                <img src="pic/07-390.png" width="68" height="71" alt="">
             </div>
-        
+            <div class="product-name">
+                <span>夏款撞色拼接袖手足套裝</span><br>
+                <span class="size">尺寸:80</span>
+            </div>
         <!-- 單價 !-->
             <div class="product-price"> 
                 NT$390
@@ -113,16 +104,13 @@
         </div>
         <!-- 商品明細2 -->
         <div class="product-list">
-            <div class="forphone">
-                <div class="product-pic">
-                    <img src="pic/08-350.png" width="68" height="71" alt="">
-                </div>
-                <div class="product-name">
-                    <span>韓版撞色we see you背心包屁衣</span><br>
-                    <span class="size">尺寸:73</span>
-                </div>
+            <div class="product-pic">
+                <img src="pic/08-350.png" width="68" height="71" alt="">
             </div>
-        
+            <div class="product-name">
+                <span>韓版撞色we see you背心包屁衣</span><br>
+                <span class="size">尺寸:73</span>
+            </div>
         <!-- 單價 !-->
             <div class="product-price"> 
                 NT$350
@@ -141,7 +129,6 @@
             </div>
         </div>
     </div>
-
 
    
     <div class="summary">
@@ -167,27 +154,25 @@
     <!-- 訂單資訊 -->
         <div class="order-information">
             <h3>訂單資訊</h3>
-            <div class="forborder">
-                <div class="subtotal">
-                    <p>小計:</p>
-                    <p>NT$740</p>
-                </div>
-                <div class="freight">
-                    <p>運費:</p>
-                    <p>NT$60</p>
-                </div>
+            <div class="subtotal">
+                <p>小計:</p>
+                <p>NT$740</p>
+            </div>
+            <div class="freight">
+                <p>運費:</p>
+                <p>NT$60</p>
+            </div>
+            <form class="coupon">
                 <p class="discount">使用折扣代碼</p>
-                <form class="coupon">    
-                    <input type="text">
-                    <button type="button">套用</button>
-                </form>
-                <div class="total">
-                    <p>合計:</p>
-                    <p>NT$800</p>
-                </div>
-                <div class="checkout">
-                    <a href="#">前往結帳</a>
-                </div>
+                <input type="text">
+                <button type="button">套用</button>
+            </form>
+            <div class="total">
+                <p>合計:</p>
+                <p>NT$800</p>
+            </div>
+            <div class="checkout">
+                <a href="#">前往結帳</a>
             </div>
         </div>
     </div>

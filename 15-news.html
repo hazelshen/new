@@ -11,45 +11,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <!-- css -->
-    <link rel="stylesheet" href="css/header&footer.css">
-    <link rel="stylesheet" href="css/news&discount.css">
+    <link rel="stylesheet" href="css/new-header&footer.css">
+    <link rel="stylesheet" href="css/news.css">
     <!-- logo -->
     <link rel="icon" href="pic/logo.ico" type="image/x-icon" >
     <title>Bebé/news</title>
 </head>
 <body>
     <!-- 導覽列 -->
+    <input type="checkbox" name="" id="menu-control">
     <header class="header">
         <div class="icon-container">
             <div class="icon">
                 <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                 <a href="15-login.html"><i class="fa-solid fa-user"></i></a>
                 <a href="15-cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="#"><i class="fa-solid fa-comment"></i></a>
             </div>
         </div>
         <div class="main-header">
             <div class="logo">
-                <a href="index.html" class="logo">
+                <a href="index.html">
                     <img src="pic/logo02.svg" alt="baby">
                 </a> 
             </div>
                 
-            <nav class="main-nav">
-                <a href="15-news&discount.html">最新消息</a>
-                <a href="#">本週新品</a>
-                <a href="15-babyproduct.html">嬰兒</a>
-                <a href="#">男童</a>
-                <a href="#">女童</a>
-                <a href="#">其他</a>
-                <a href="15-aboutus.html">關於我們</a>
+            <nav>
+                <a href="15-news.html">News</a>
+                <a href="#">New Arrival</a>
+                <a href="15-babyproduct.html">Baby</a>
+                <a href="#">Boy</a>
+                <a href="#">Girl</a>
+                <a href="#">Other</a>
+                <a href="15-aboutus.html">About</a>
             </nav>
+            <label for="menu-control" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
-    </header>
+    </header> 
     
     <!-- 最新消息-->
     
-    <h2>最新消息&優惠活動<br><span>News&Discount</span></h2>
+    <h2>最新消息<br><span>News</span></h2>
         <div class="news-container">
             <div class="newslist">
                 <a href="#">
@@ -142,7 +147,7 @@
                         <a href="#">隱私權保護</a>
                     </div>
                 </div>
-                <div class="=footer-item">
+                <div class="footer-item">
                     <h4>CONTACT</h4>
                     <div class="footer-list">
                         <p>客服電話：(02) 2203-1234</p>
@@ -151,13 +156,15 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-notic">
-                <p>本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</p>
-            </div>
-            <div class="footer-icon">
-                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-line"></i></a>
+            <div class="icon-box">
+                <div class="footer-icon">
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-line"></i></a>
+                </div>
+                <div class="footer-notic">
+                    <p>本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</p>
+                </div>
             </div>
         </div>
     </div>
@@ -165,23 +172,7 @@
     <!-- top按鈕 -->
     <button onclick="topFunction()" id="myBtn" title="Gotop"><img src="pic/top.png" width="40px" height="40px"></button> 
     
-    <!-- top按鈕 -->
-    <script>
-        window.onscroll = scrollFunction; //每當畫面捲動觸發一次
-
-        function scrollFunction() { 
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            document.getElementById("myBtn").style.display = "block";
-        } else {
-            document.getElementById("myBtn").style.display = "none";
-        }
-        }//網頁捲動超過200pixel就會跑出來 display設定成block 跑回上面就隱藏。
-
-        // 重置scrollTop這個變數的值
-        function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-    </script>
+    <script src="js/top.js"></script>
+   
 </body>
 </html>

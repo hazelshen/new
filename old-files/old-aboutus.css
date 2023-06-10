@@ -1,0 +1,116 @@
+/* 標題 */
+h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+h2 span{
+    font-size: 22px;
+}
+.paragraph-first{
+    display: flex;
+    width: 100%;
+    background-color: #F1E8DD;
+    justify-content: center;
+}
+.aboutus-info{
+    display: flex;
+    width: 1200px;
+    justify-content: space-between
+}
+.aboutus-info p{
+    width: 480px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    margin-top: 90px;
+    margin-left: 70px;
+}
+.aboutus-pic {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.pic-heart{
+    position: relative;
+    left: 530px;
+    top: -20px;
+}
+.aboutus-pic img{
+    border-radius: 5px;
+}
+/* 第二段 */
+.about-us{
+    display: flex;
+    width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.aboutus-photo img{
+    margin-left: 250px;
+    box-shadow: -10px 15px 0 5px rgb(213, 213, 213,0.5);
+}
+.aboutus-card img{
+    margin-left: 55px;
+    margin-top: -20px;
+    box-shadow: -10px 15px 0 5px rgb(213, 213, 213,0.5);
+}
+.pic-flower img{
+    margin-left: 400px;
+    transform:rotate(-15deg);
+}
+/* 第三段 */
+.aboutus-text,.aboutus-txt{
+    width: 500px; 
+    letter-spacing: 3px;
+    padding: 20px;
+    line-height: 30px;
+    padding-right: 120px;
+    margin-right: 30px;
+}
+.aboutus-img img{           
+    box-shadow: 15px 15px rgb(213, 213, 213,0.5);
+    margin-left: 120px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.icon-fb{
+    margin-left: 160px;
+    margin-top: 140px;
+    transform:rotate(15deg);
+}
+.icon-ig{
+    margin-left: 400px;
+    margin-top: -200px;
+    transform:rotate(-5deg);
+}
+.icon-fb img:hover{
+    transform:rotate(15deg);
+}
+.icon-ig img:hover{
+    transform:rotate(15deg);
+}
+/* 動畫效果 */
+
+.paragraph-first{
+    opacity: 0; /* 初始狀態隱藏 */
+    transform: translateX(-100px); /* 初始位置在左邊 */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* 使用動畫效果 */
+}
+.paragraph-second,
+.paragraph-third {
+    opacity: 0; /* 初始狀態隱藏 */
+    transform: translateX(100px); /* 初始位置在右邊 */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* 使用動畫效果 */
+}
+  
+.paragraph-first.reverse{
+    transform: translateX(100px); /* 初始位置在右邊 */
+}
+  
+.paragraph-second.reverse,
+.paragraph-third.reverse {
+    transform: translateX(-100px); /* 初始位置在左邊邊 */
+}
+  

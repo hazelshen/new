@@ -9,23 +9,18 @@ h2 span{
 .news-container{
     display: flex;
     margin: auto;
-    width: 1000px;
+    max-width: 1000px;
     flex-direction: column;
     /* padding: 80px; */
 }
 .news-container .newslist a{
-    display: flex;
-    flex-direction:reverse;
-    justify-content: center;
     margin-bottom: 40px;
     margin-top: 40px;
     text-decoration: none;
     color: #9B866A;
     font-size: 20px;
 }
-.newslist .news-pic{
-    margin-right: 100px;
-}
+
 .news-pic img{
     width: 100%;
 }
@@ -37,11 +32,6 @@ hr{
     width:1000px;
     margin: auto;
 }
-.newslist .news-content{
-    width: 500px;
-    padding: 5px;
-}
-
 .newslist .news-title{
     font-size: 20px;
     color: black;
@@ -53,5 +43,35 @@ hr{
     /* margin: 10px; */
     line-height: 35px;
     color: #605f5f;
+}
+
+@media screen and (max-width:767px) {
+    .newslist{
+        margin: 30px;
+        text-align: center;
+    }
+    .news-title{
+        margin-bottom: -20px;
+    }
+    hr{
+        display: none;
+    }
+    .news-time{
+        display: none;
+    }
     
+
+}
+@media screen and (min-width:768px) {
+    .news-container .newslist a{
+        display: flex;
+        justify-content: center;
+    }
+    .newslist .news-content{
+        width: 500px;
+        padding: 5px;
+    }
+    .newslist .news-pic{
+        margin-right: 100px;
+    }
 }

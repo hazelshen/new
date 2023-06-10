@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <!-- css -->
-    <link rel="stylesheet" href="css/header&footer.css">
+    <link rel="stylesheet" href="css/new-header&footer.css">
     <link rel="stylesheet" href="css/baby-product.css">
     <!-- logo -->
     <link rel="icon" href="pic/logo.ico" type="image/x-icon" >
@@ -19,33 +19,38 @@
 </head>
 <body>
      <!-- 導覽列 -->
-     <header class="header">
+    <input type="checkbox" name="" id="menu-control">
+    <header class="header">
         <div class="icon-container">
             <div class="icon">
                 <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                 <a href="15-login.html"><i class="fa-solid fa-user"></i></a>
                 <a href="15-cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="#"><i class="fa-solid fa-comment"></i></a>
             </div>
         </div>
         <div class="main-header">
             <div class="logo">
-                <a href="index.html" class="logo">
+                <a href="index.html">
                     <img src="pic/logo02.svg" alt="baby">
                 </a> 
             </div>
                 
-            <nav class="main-nav">
-                <a href="15-news&discount.html">最新消息</a>
-                <a href="#">本週新品</a>
-                <a href="15-babyproduct.html">嬰兒</a>
-                <a href="#">男童</a>
-                <a href="#">女童</a>
-                <a href="#">其他</a>
-                <a href="15-aboutus.html">關於我們</a>
+            <nav>
+                <a href="15-news.html">News</a>
+                <a href="#">New Arrival</a>
+                <a href="15-babyproduct.html">Baby</a>
+                <a href="#">Boy</a>
+                <a href="#">Girl</a>
+                <a href="#">Other</a>
+                <a href="15-aboutus.html">About</a>
             </nav>
+            <label for="menu-control" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
-    </header>
+    </header> 
     <!-- 嬰兒 -->
     <h2>嬰兒<br><span>Baby</span></h2>
     <div class="product-item">
@@ -65,14 +70,14 @@
                     <span>滿版熊熊包屁衣<br>NT$390</span>
                 </div>
                 <!-- 新增form -->
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car" type="button">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -83,14 +88,14 @@
                 <div class="product-text">
                     <span>藍莓包屁衣<br>NT$390</span>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car" type="button">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -101,14 +106,14 @@
                 <div class="product-text">
                     <p>華夫格牛仔藍套裝連身衣<br>NT$390</p>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car" type="button">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -119,14 +124,14 @@
                 <div class="product-text">
                     <p>可愛大眼寬版包屁衣<br>NT$390</p>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car" type="button">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -137,14 +142,14 @@
                 <div class="product-text">
                     <p>翻領熊熊條紋包屁衣<br>NT$490</p>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car" type="button">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -155,14 +160,14 @@
                 <div class="product-text">
                     <p>粉嫩小花包屁衣<br>NT$490</p>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -173,14 +178,14 @@
                 <div class="product-text">
                     <p>春裝韓版公主風碎花包屁衣<br>NT$450</p>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -191,14 +196,14 @@
                 <div class="product-text">
                     <p>小熊無袖純棉套裝<br>NT$380</p>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car" type="button">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -209,14 +214,14 @@
                 <div class="product-text">
                     <p>小熊維尼笑臉包屁衣<br>NT$299</p>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car" type="button">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -227,14 +232,14 @@
                 <div class="product-text">
                     <p>可愛米奇吊帶造型爬爬衣<br>NT$350</p>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car" type="button">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -245,14 +250,14 @@
                 <div class="product-text">
                     <p>可愛卡通圖案包屁衣<br>NT$299</p>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car" type="button">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -263,14 +268,14 @@
                 <div class="product-text">
                     <p>四宮格唐老鴨包屁衣<br>NT$299</p>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car" type="button">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -281,32 +286,32 @@
                 <div class="product-text">
                     <p>可愛拚肩撞色吐司爬爬衣<br>NT$299</p>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                      <button class="car" type="button">加入購物車</button>
                     </div>
                 </form>
             </div>
             <div class="product-info">
                 <div class="product-pic">
-                    <a href="#"><img src="pic/p14.png" alt="babysuit" width="220px" height="220px"></a>
+                    <a href="#"><img src="pic/p14.png" alt="babysuit"></a>
                 </div>
                 <div class="product-text">
                     <p>小松鼠包屁衣<br>NT$390</p>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car" type="button">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -317,14 +322,14 @@
                 <div class="product-text">
                     <p>小圓弧領包屁衣<br>NT$350</p>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car" type="button">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -335,14 +340,14 @@
                 <div class="product-text">
                     <p>可愛大眼寬版包屁衣<br>NT$390</p>
                 </div>
-                <form action="add-to-car">
+                <form>
                     <div class="quantity">
-                        <button type="button" class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <span>1</span>
-                        <button type="button" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                        <span class="quantity-value">1</span>
+                        <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="shopping-car">
-                        <button type="submit" class="car">加入購物車</button>
+                        <button class="car" type="button">加入購物車</button>
                     </div>
                 </form>
             </div>
@@ -392,7 +397,7 @@
                         <a href="#">隱私權保護</a>
                     </div>
                 </div>
-                <div class="=footer-item">
+                <div class="footer-item">
                     <h4>CONTACT</h4>
                     <div class="footer-list">
                         <p>客服電話：(02) 2203-1234</p>
@@ -401,36 +406,25 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-notic">
-                <p>本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</p>
-            </div>
-            <div class="footer-icon">
-                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-line"></i></a>
+            <div class="icon-box">
+                <div class="footer-icon">
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-line"></i></a>
+                </div>
+                <div class="footer-notic">
+                    <p>本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</p>
+                </div>
             </div>
         </div>
     </div>
     <!-- top按鈕 -->
     <button onclick="topFunction()" id="myBtn" title="Gotop"><img src="pic/top.png" width="40px" height="40px"></button> 
 
-    <!-- top按鈕 -->
-    <script>
-        window.onscroll = scrollFunction; //每當畫面捲動觸發一次
+    <script src="js/top.js"></script>
+    <script src="js/baby-product.js"></script>
+    
+    
 
-        function scrollFunction() { 
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            document.getElementById("myBtn").style.display = "block";
-        } else {
-            document.getElementById("myBtn").style.display = "none";
-        }
-        }//網頁捲動超過200pixel就會跑出來 display設定成block 跑回上面就隱藏。
-
-        // 重置scrollTop這個變數的值
-        function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-    </script>
 </body>
 </html>

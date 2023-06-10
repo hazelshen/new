@@ -4,50 +4,12 @@
     background-repeat: no-repeat;
     background-size: 100%;
     min-height: 700px;
-    margin-top: 100px;
-    background-position: center center;
 }
 /* 首頁活動 */
 .event-container{
     display:flex;
-    width: 1200px;
-    justify-content: space-around;
-    text-align: center;
-    margin: auto;
-}
-h2{
-    line-height: 40px;
-    letter-spacing: 5px;
-    font-weight:bolder;
-}
-.event-content{
-    margin-top: 180px;
-}
-.event-content p{
-    margin-top: 45px;
-    line-height: 30px;
-    font-size: 20px;
-}
-.event-content p span{
-    font-weight:bolder;
-}
-/* 活動圖片 */
-.event-pic-first img{
-    border-radius: 15px;
-    margin-top: 150px;
-}
-.event-pic-second img{
-    border-radius: 15px;
-    margin-top: -10px;
 }
 /* 最新商品 */
-.new-arrival{
-    display: flex;
-    width: 1200px;
-    margin: auto;
-    flex-direction: column;
-    position: relative;
-}
 .star img{
     position: absolute;
     top: 100px;
@@ -56,17 +18,9 @@ h2{
 h3{
     text-align: center;
     font-size: 20px;
-    padding-top: 150px;
+   
 }
 /* 4個圈圈 */
-.new-arrival-theme{
-    display:flex;
-    width: 1200px;
-    margin: auto;
-}
-.new-arrival-theme img{
-    border-radius: 50%;
-}
 .new-arrival-theme .baby,.girl,.boy,.other{ 
     display: flex;
     flex-direction: column;
@@ -74,21 +28,15 @@ h3{
     text-align: center;
     font-size: 18px;
 }
-.new-arrival-theme .baby,.boy{
-    margin-top: 100px;
-}
 .new-arrival-theme .other .goodchoice{
-    font-size: 16px;
+    font-size: 14px;
     transform:rotate(15deg);
-    margin-left: 70px;
-}
-.new-arrival-theme img:hover{
-    transform:rotate(-8deg);
+    margin-left: 100px;
 }
 /* 全站好康＆好禮 */
 .discount{
     display: flex;
-    width: 800px;
+    max-width: 800px;
     padding-top: 100px;
     margin: auto;
     justify-content: space-around;
@@ -103,18 +51,13 @@ h3{
     font-size: 16px;
 }
 .discount-box{
-    width: 800px;
+    max-width: 800px;
     display: flex;
     margin:auto;
     justify-content:space-around;
     background-color:rgba(194, 211, 241, 0.5);
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-radius: 10px;
     align-items: center;
     text-align: center;
-    line-height: 30px;
-    font-size: 14px;
 }
 /* 照片分享 */
 .sharing{
@@ -123,7 +66,7 @@ h3{
     margin: auto;
 }
 .sharing-card{
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     position: relative;
 }
@@ -136,25 +79,23 @@ h3{
 }
 .rainbow img{
     position: absolute;
-    left: 700px;
+    left: 100px;
     top: 100px;
     transform:rotate(15deg);
 }
-/* 圖片輪播 */
-.owl-carousel{
-    display: flex;
-    max-width: 1200px;
-    margin: auto;
-    padding-top: 110px;
-}
-.sharing-box .owl-carousel img{
-    border-radius: 5px;            
-}
+
 /* 最新消息 */
+.news-box{
+    display: flex;
+    width: 1200px;
+    margin: auto;
+    justify-content: space-around;
+    padding-bottom: 50px;
+}
 .news{
     display: flex;
     flex-direction: column;
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     position: relative;
 }
@@ -166,13 +107,6 @@ h3{
     top: 55px;
     left: 450px;
     transform:rotate(-15deg);
-}
-.news-box{
-    display: flex;
-    width: 1200px;
-    margin: auto;
-    justify-content: space-around;
-    padding-bottom: 50px;
 }
 .news-box a{
     text-decoration: none;
@@ -188,16 +122,13 @@ h3{
     padding-top: 10px;
     color: #9B866A;
 }
+  
+
 /* 人氣商品 */
-.hot-item{
-    margin-top: 100px;
-    padding-bottom: 120px;
-    /* position: relative; */
-    background-color:#FCE1E0;
-}
+
 .hot-item-top{
     position: relative;
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
 }
 .bubble img{
@@ -208,25 +139,21 @@ h3{
 }
 .hot-item-box{
     display: flex;
-    width: 1200px;
+    max-width: 1200px;
     flex-direction: column;
     margin: auto; 
 }
 .hot-item-card{
     display: flex;
     justify-content: space-around;
-    margin-top: -70px;
     z-index: 1;
 
 }
 .hot-item-container{
     display: flex;
     justify-content: space-around;
-    padding-top: 100px;
 }
-.item .item-pic img{
-    border-radius: 5px 5px 0 0;
-}
+
 .item .item-text{
     text-align: center;
     font-size: 14px;
@@ -236,27 +163,278 @@ h3{
     text-decoration: none;
     color: black;
 }
+.item .item-pic img{
+    border-radius: 5px 5px 0 0;
+}
 .item{
     background-color: #F1E8DD;
     border-radius: 5px;
 }
+
 /* shopnow */
 .shop-now{
     display: flex;
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     justify-content: center;
     padding-top: 50px;
 }
 .shop-now a{
     text-decoration: none;
-    color: black;
+    color: #9B866A;
 }
 .shop-now p{
-    background-color: #F1E8DD;
     font-size: 14px;
     padding: 10px;
     border-radius: 5px;
+    border: 1px solid #9B866A;
+}
+.shop-now a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #9B866A;
+    border-radius: 5px;
+}
+@media screen and (max-width:767px) {
+    .event-pic-first img{
+        width: 100px;
+        margin-top: -15px;
+        margin-left: 40px;
+        border-radius: 5px;
+    }
+    .index-event{
+        margin-top: 30px;
+    }
+    .event-pic-second{
+        display: none;
+    }
+    .event-container{
+        justify-content: center;
+    }
+    .event-content{
+        font-size: 10px;
+        text-align: center;
+        margin-top: 3px;
+    }
+    .event-content p{
+        margin-top: 5px;
+        font-size: 8px;
+    }
+    /* 最新商品 */
+    .star, .goodchoice{
+        display: none;
+    }
+    .new-arrival{
+        margin-top: -470px;
+    }
+    .new-arrival-theme{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:5px;
+        margin-top: 40px;
+    }
+    .new-arrival-theme img{
+        width: 160px;
+        height: 160px;
+    }
+    /* 全站好康＆好禮 */
+    .discount{
+        display: none;
+    }
+    .discount-box{
+        font-size: 8px;
+        width: 100%;
+        margin-top: 70px;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 20px 5px 20px 5px;
+    }
+    .free-coupon img{
+        width: 75px;
+        height: 53px;
+    }
+    .instock img{
+        width: 75px;
+        height: 63px;
+    }
+    .member-discount img{
+        width: 69px;
+        height: 69px;
+    }
+    .after-service img{
+        width: 66px;
+        height: 68px;
+    }
+    /* 照片分享 */
+    .rainbow{
+        display: none;
+    }
+    .sharing-box{
+        background-image: none;
+    }
+    .sharing h3{
+        margin-top: 70px;
+    }
+    .sharing-box .owl-carousel img{
+        margin-top: 40px;
+        width: 100%;
+    }
+    /* 最新消息 */
+    .balloon{
+        display: none;
+    }
+    .news h3{
+        margin-top: -150px;
+    }
+    /* 人氣商品 */
+    .bubble{
+        display: none;
+    }
+    .hot-item-card,.hot-item-container{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap:10px;
+        box-sizing: border-box;
+        padding: 0 5px 0 5px;
+    }
+    .item-pic img{
+        width: 100%;
+    }
+    .hot-item{
+        margin-top: 50px;
+    }
+    .hot-item-box{
+        margin-top: 60px;
+    }
+    .hot-item-container{
+        margin-top: 10px;
+    }
+   
+    
+}
+@media screen and (min-width:768px)  {
+    .index-event{
+        margin-top: 100px;
+        background-position: center center;
+    }
+    .event-pic-first img{
+        width: 375px;
+        height: 517px;
+        margin-top: 150px;
+        border-radius: 15px;
+    }
+    .event-pic-second img{
+        width: 375px;
+        height: 517px;
+        border-radius: 15px;
+        margin-top: -10px;
+    }
+    .event-container{
+        display:flex;
+        max-width: 1200px;
+        justify-content: space-around;
+        text-align: center;
+        margin: auto;
+    }
+    h2{
+        line-height: 40px;
+        letter-spacing: 5px;
+        font-weight:bolder;
+    }
+    .event-content{
+        margin-top: 180px;
+    }
+    .event-content p{
+        margin-top: 45px;
+        line-height: 30px;
+        font-size: 20px;
+    }
+    .event-content p span{
+        font-weight:bolder;
+    }
+    /* 最新商品 */
+    h3{
+        box-sizing: border-box;
+         padding-top: 150px;
+    }
+    .new-arrival{
+        display: flex;
+        max-width: 1200px;
+        margin: auto;
+        flex-direction: column;
+        position: relative;
+    }
+    /* 4個圈圈 */
+    .new-arrival-theme{
+        display:flex;
+        width: 1200px;
+        margin: auto;
+    }
+    .new-arrival-theme img{
+        border-radius: 50%;
+        animation: swing 2s infinite alternate;
+    }
+    .new-arrival-theme .baby,.boy{
+        margin-top: 100px;
+    }
+    .new-arrival-theme img{
+        width: 268px;
+        height: 260px;
+    }
+    /* 左右晃動效果 */
+    @keyframes swing {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(10deg);
+        }
+        100% {
+            transform: rotate(-10deg);
+        }
+        }
+    /* 全站好康＆好禮 */
+    .discount-box{
+        box-sizing: border-box;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 10px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    /* 圖片輪播 */
+    .owl-carousel{
+        display: flex;
+        max-width: 1200px;
+        margin: auto;
+        box-sizing: border-box;
+        padding-top: 110px;
+    }
+    .sharing-box .owl-carousel img{
+        border-radius: 5px;           
+    }
+    /* 人氣商品 */
+    .hot-item{
+        background-color:#FCE1E0;
+    }
+    .item-pic img{
+        width: 256px;
+        height: 272px;
+    }
+    .hot-item{
+        margin-top: 100px;
+        padding-bottom: 120px;
+        /* position: relative; */
+    }
+    .hot-item-card{
+        margin-top: -70px;
+    }
+    .hot-item-container{
+        padding-top: 100px;
+    }
+   
+   
 }
 
   

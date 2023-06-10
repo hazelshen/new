@@ -8,7 +8,7 @@ h2 span{
 }
 .product-item{
     display: flex;
-    max-width: 1200px;
+    width: 1200px;
     margin: auto;
 }
 .nav-item {
@@ -17,6 +17,7 @@ h2 span{
     position: relative;
     text-decoration: none;
     color: #9B866A;
+    margin-left: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -45,16 +46,16 @@ h2 span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1200px;
-    margin: auto;
 }
-
+.product-box .next-page{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
 .baby-product{
     display: grid;
-    width: 100%;
-    /* width: 1200px; */
-    /* padding: 0 20px 20px; */
-    /* margin: auto; */
+    width: 1200px;
+    margin: auto;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 30px;
@@ -62,13 +63,14 @@ h2 span{
 .product-info {
     margin: auto;
     padding-top: 25px;
-    max-width: 220px;
 }
-
+.product-info .product-pic{
+    background-color: #F1E8DD;
+    padding: 12px;
+}
 .product-info img{
-    width: 100%;
-    /* width: 220px; */
-    /* height: 220px; */
+    width: 220px;
+    height: 220px;
 }
 .product-info .product-text{
     margin: 5px;
@@ -90,10 +92,13 @@ h2 span{
 .product-info .quantity{
     display: flex;
     width: 100px;
+    /* height:25px; */
     margin: auto;
     justify-content: space-around;
+    /* border: 1px solid #9B866A; */
+    /* border-radius: 5px; */
     font-size: 14px;
-    
+    /* cursor: pointer;  */
 }
 .quantity .minus,.plus{
     background-color: rgba(0, 0, 0, 0);
@@ -104,16 +109,18 @@ h2 span{
     font-size: 14px;
     color: #9B866A;
     cursor: pointer;
+    /* border: 1px solid #9B866A; */
 
 }
 .quantity span{
     color: #A0A0A0;
+    /* border: 1px solid #A0A0A0; */
+    /* width: 100px; */
 }
 .shopping-car{
     display: flex;
     justify-content: center;
     padding: 10px;
-   
 }
 .shopping-car .car{
     border-color: #9B866A;;
@@ -122,7 +129,7 @@ h2 span{
     border-radius: 5px;
     color: #9B866A;
     font-size: 14px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .quantity button:hover{
     color:white;
@@ -134,37 +141,13 @@ h2 span{
 }
  
 /* 頁數 */
-.product-box .next-page{
+.next-page{
     display: flex;
-    width: 100%;
-    justify-content: center;
-    padding-top: 50px;
+    width: 1200px;
 }
 .next-page a{
     text-decoration: none;
     color: #9B866A;
     letter-spacing: 8px;
     font-size: 14px;
-}
-@media screen and (max-width:767px) {
-    .baby-product{
-        grid-template-columns: repeat(2, 1fr);
-        gap:5px;
-    }
-    .product-info{
-        margin: 10px;
-    }
-    .nav-item {
-        margin-left: 30px;
-      }
-
-}
-@media screen and (min-width:768px){
-    .product-info .product-pic{
-        background-color: #F1E8DD;
-        padding: 12px;
-    }
-    .nav-item {
-        margin-left: 50px;
-      }
 }

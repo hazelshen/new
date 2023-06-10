@@ -4,14 +4,6 @@
     font-family: 'Noto Sans TC', sans-serif;
 }
 /* 導覽列 */
-.icon-container{
-    padding: 5px;
-    margin-top: 10px;
-    /* margin: auto; */
-}
-#menu-control{
-    display: none;
- }
 .header{
     background-image: url(../pic/bcg-img-02.png);
     background-size: cover;
@@ -21,6 +13,14 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
+.icon-container{
+    display: flex;
+    width: 1200px;
+    justify-content: flex-end;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: auto;
+}
 .icon-container .icon a{
     color: #9B866A;
     font-size: 20px;
@@ -28,19 +28,22 @@
 }
 .main-header{
     display: flex;
-    max-width: 1200px;
+    width: 1200px;
     align-items: center;
     margin: auto;
     margin-top:-60px;
 }
-nav{
+.main-header .main-nav{
     display: flex;
     background-color: #F2E9DE;
     padding: 10px;
     width: 1053px;
+    border-radius: 0 100px 100px 0;
     justify-content: space-around;
+    
+    
 }
-nav a{
+.main-header .main-nav a{
     text-decoration: none;
     color: #9B866A;
     margin-left: 30px;
@@ -109,7 +112,8 @@ nav a{
     margin-top: 30px;
 }
 .footer .footer-block{
-    display: flex;    
+    display: flex;
+    width: 400px;     
     text-align: center;
     text-decoration: none;
     color: #9B866A;
@@ -156,86 +160,7 @@ h4{
   #myBtn:hover {
     opacity:0.8; 
   }
-  
   @media screen and (max-width:767px) {
-    /* 導覽列 */
-    /* .header{
-        height: 50px;
-        
-        position: relative;
-        border-bottom: 1px solid #9B866A;
-    } */
-    .header{
-        height: 50px;
-        position: fixed;
-        background-image: none;
-        background-color: white;
-        top: 0;
-        left: 0;
-        right: 0;
-        border-bottom: 1px solid #9B866A;
-        z-index: 999;
-    }
-    body{
-        padding-top: 50px;
-    }
-    .bcg-img img{
-        width: 100%;
-    }
-    .logo img{
-        width: 60px;
-        height: 60px;
-        margin-top: 10px;
-        vertical-align: bottom;
-    }
-    .menu-btn{
-        width: 40px;
-        height: 40px;
-        display: block;
-        position: absolute;
-        top: 3px;
-        right: 3px;
-        cursor: pointer;
-    }
-    .menu-btn::before{
-        content: '';
-        position: absolute;
-        height: 3px;
-        left: 2px;
-        width: 25px;
-        background-color: #9B866A;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        box-shadow: 0px 8px 0px #9B866A,0px -8px 0px #9B866A;
-    }
-    nav{
-        width: 70%;
-        height:100vh;
-        background-color: #F2E9DE;
-        position: absolute;
-        top: 50px;
-        left: -100%;
-        display:block;
-        transition: .5s;
-    }
-    nav a{
-        display: block;
-        box-sizing: border-box;
-        padding: 10px 20px;
-        border-bottom: 1px solid #9B866A;
-    }
-    #menu-control:checked ~ .header nav{
-        left:0;
-    }
-    .icon-container{
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 40px;
-        margin-top: -20px;
-    }
-    
-    /* 頁尾 */
     .socialmedia-login{
         flex-direction: column;
         align-items: center;
@@ -253,39 +178,14 @@ h4{
         flex-direction: column;
     }
     .footer-icon{
-        margin: auto;
-        text-align: center;
+        margin-left: 160px;
         margin-top: 10px;
     }
     .footer-notic{
         width: 300px;
-        margin: auto;
+        margin-left: 50px; 
         text-align: center;
         margin-top: 30px;
-    }
-    .footer .footer-block{
-        max-width: 400px;     
-    }
-}
-@media screen and (min-width:768px){
-    #menu-control{
-        display: none;
-    }
-    nav{
-        border-radius: 0 100px 100px 0;
-    }
-    .icon-container{
-    display: flex;
-    max-width: 1100px;
-    justify-content: flex-end;
-    margin: auto;
-    margin-bottom: 10px;
-   
-    }
-    .bcg-img{
-        display: none;
-    }
-    .footer .footer-block{
-        width: 400px;     
-    }
+        
+    } 
 }

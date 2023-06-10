@@ -2,24 +2,28 @@
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans TC', sans-serif;
+   
 }
-/* 導覽列 */
-.icon-container{
-    padding: 5px;
-    margin-top: 10px;
-    /* margin: auto; */
+ /* 導覽列 */
+ body{
+    padding-top: 200px;
 }
-#menu-control{
-    display: none;
- }
 .header{
-    background-image: url(../pic/bcg-img-02.png);
-    background-size: cover;
-    /* width: 1200px; */
-    height: 730px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
+   position: fixed;
+   width: 100%;
+   background-color: white;
+   top: 0;
+   left: 0;
+   z-index: 2;    
+}
+.icon-container{
+    display: flex;
+    max-width: 1200px;
+    justify-content: flex-end;
+    padding: 5px;
+    /* margin: auto; */
+    margin-top: 10px;
+    margin-left: 85px;
 }
 .icon-container .icon a{
     color: #9B866A;
@@ -31,16 +35,18 @@
     max-width: 1200px;
     align-items: center;
     margin: auto;
-    margin-top:-60px;
+    margin-top:-50px;
 }
-nav{
+.main-header .main-nav{
     display: flex;
     background-color: #F2E9DE;
     padding: 10px;
     width: 1053px;
+    border-radius: 0 100px 100px 0;
     justify-content: space-around;
+    
 }
-nav a{
+.main-header .main-nav a{
     text-decoration: none;
     color: #9B866A;
     margin-left: 30px;
@@ -58,13 +64,14 @@ nav a{
     width: 100%;
     vertical-align: middle;
 }
+
 /* 下方icon點選 */
 .service-icon{
     display: flex;
     /* width: 1200px; */
     height: 100px;
     margin: auto;
-    margin-top:80px;
+    margin-top: 100px;
 }
 .service-icon .icon-user,.icon-checklist,.icon-delivery,.icon-clothes,.icon-message{
     width: 25%;
@@ -109,7 +116,8 @@ nav a{
     margin-top: 30px;
 }
 .footer .footer-block{
-    display: flex;    
+    display: flex;
+    width: 400px;     
     text-align: center;
     text-decoration: none;
     color: #9B866A;
@@ -156,86 +164,116 @@ h4{
   #myBtn:hover {
     opacity:0.8; 
   }
-  
-  @media screen and (max-width:767px) {
-    /* 導覽列 */
-    /* .header{
-        height: 50px;
-        
-        position: relative;
-        border-bottom: 1px solid #9B866A;
-    } */
-    .header{
-        height: 50px;
-        position: fixed;
-        background-image: none;
-        background-color: white;
-        top: 0;
-        left: 0;
-        right: 0;
-        border-bottom: 1px solid #9B866A;
-        z-index: 999;
-    }
-    body{
-        padding-top: 50px;
-    }
-    .bcg-img img{
-        width: 100%;
-    }
-    .logo img{
-        width: 60px;
-        height: 60px;
-        margin-top: 10px;
-        vertical-align: bottom;
-    }
-    .menu-btn{
-        width: 40px;
-        height: 40px;
-        display: block;
-        position: absolute;
-        top: 3px;
-        right: 3px;
-        cursor: pointer;
-    }
-    .menu-btn::before{
-        content: '';
-        position: absolute;
-        height: 3px;
-        left: 2px;
-        width: 25px;
-        background-color: #9B866A;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        box-shadow: 0px 8px 0px #9B866A,0px -8px 0px #9B866A;
-    }
-    nav{
-        width: 70%;
-        height:100vh;
-        background-color: #F2E9DE;
-        position: absolute;
-        top: 50px;
-        left: -100%;
-        display:block;
-        transition: .5s;
-    }
-    nav a{
-        display: block;
-        box-sizing: border-box;
-        padding: 10px 20px;
-        border-bottom: 1px solid #9B866A;
-    }
-    #menu-control:checked ~ .header nav{
-        left:0;
-    }
-    .icon-container{
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 40px;
-        margin-top: -20px;
-    }
+
+
+  /* 會員登入 */
+.logoin-box{
+    width: 100%;
+}
+
+.member-login{         
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #9B866A;
+    max-width: 750px;
+    /* height: 550px; */
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
     
-    /* 頁尾 */
+}
+.login-item{
+    border-bottom: 1px solid #9B866A;
+    display: flex;
+}
+.login-item .register,.login{
+    border: none;
+    background-color: rgba(0,0,0,0);
+    width: 385px;
+    height: 80px;
+    color: #9B866A;
+    font-size: 20px;
+}
+.login-item a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-item .login {
+    background-color: #9B866A;
+    color: white;
+}
+.socialmedia-login{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+.line-login{
+    width: 280px;
+    height: 30px;
+    background-color: #1EC903;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    padding: 5px;
+}
+.fb-login{
+    width: 280px;
+    height: 30px;
+    background-color: #435EAA;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    padding: 5px;
+}
+.line-login .line-icon,.fb-login .fb-icon{
+    border: none;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0);
+    color: white
+}
+.line-login a,.fb-login a{
+    text-decoration: none;
+    color: white;
+}
+.login-info{
+    color: #9B866A;
+    padding: 20px;
+    font-size: 20px;
+}
+.account input,.password input{
+    border:none;
+    width: 300px;
+    height: 30px;
+    background-color:#F2E9DE;
+    border-radius: 3px;
+    margin: 10px;
+    letter-spacing: 3px;
+    padding-left: 10px;
+}
+::placeholder{
+    color: #9B866A;
+    text-indent: 0.5em;
+}
+.start-shopping .start{
+    border: 1px solid #9B866A;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0);
+    color: #9B866A;
+    font-size: 18px;
+}
+.forget-password{
+    margin:20px;
+}
+.forget-password a{
+    text-decoration: none;
+    color: #9B866A;
+    font-size: 14px;
+}
+
+@media screen and (max-width:767px) {
     .socialmedia-login{
         flex-direction: column;
         align-items: center;
@@ -253,39 +291,14 @@ h4{
         flex-direction: column;
     }
     .footer-icon{
-        margin: auto;
-        text-align: center;
+        margin-left: 160px;
         margin-top: 10px;
     }
     .footer-notic{
         width: 300px;
-        margin: auto;
+        margin-left: 50px; 
         text-align: center;
         margin-top: 30px;
-    }
-    .footer .footer-block{
-        max-width: 400px;     
-    }
-}
-@media screen and (min-width:768px){
-    #menu-control{
-        display: none;
-    }
-    nav{
-        border-radius: 0 100px 100px 0;
-    }
-    .icon-container{
-    display: flex;
-    max-width: 1100px;
-    justify-content: flex-end;
-    margin: auto;
-    margin-bottom: 10px;
-   
-    }
-    .bcg-img{
-        display: none;
-    }
-    .footer .footer-block{
-        width: 400px;     
-    }
+        
+    } 
 }

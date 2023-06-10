@@ -1,0 +1,130 @@
+/* 麵包屑 */
+.product-content{
+    padding: 10px 0;
+    width: 1200px;
+    margin: auto;
+}
+.breadcrumb{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    list-style: none;
+}
+.breadcrumb li{
+    padding: 0 10px;
+}
+.breadcrumb a{
+    text-decoration: none;
+    color: #797777;
+    font-size: 14px;
+}
+.breadcrumb li + li{
+    padding-left: 0;
+}
+.breadcrumb li + li:before{
+    content: '>';
+    color: #797777;
+    margin-right: 20px;
+}
+.breadcrumb li:hover{
+    transform:scale(1.1,1.1);
+}
+
+/* 產品圖片 */
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin: auto;
+}
+.product-container{
+    display: flex;
+    margin: auto;
+    padding-top: 70px;
+}
+.picture-box{
+    display: grid;
+    /* height: 650px; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(min-content, 1fr);
+    gap: 5px;
+}
+.picture-box :first-child{
+    grid-area: 1/1/2/-1;
+}
+/* 包圖片＋文字介紹 */
+.product-text{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    line-height: 30px;
+    /* border-bottom: 1px solid black; */
+}
+.product-text .product-name{
+    text-align: center;
+    font-size: 22px;
+}
+.product-text .product-info{
+    font-size: 18px;
+}
+.product-text .price{
+    font-size: 22px;   
+}
+.information form{
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    padding: 50px;
+}
+.information span{
+    font-size: 16px;
+}
+.information button{
+    font-size: 14px;
+    border:1px solid #9B866A;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    letter-spacing: 2px;
+    margin-top: 8px;  
+}
+.information .buy-option,.quantity-option,.size-option,.color-option{
+    margin-top: 18px;
+}
+.information .quantity-option button{
+    border: none;
+    padding-top: 10px;
+}
+.information button:hover{
+    color:white;
+    background-color: #9B866A;
+}
+/* 尺寸表 */
+.detail{
+    display: flex;
+    margin: auto;
+    width: 1200px;
+    padding-top: 100px;
+    justify-content: space-around;
+}
+.size-chart, .methods-option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.methods-option{
+    padding-right: 150px;
+}
+.detail span{
+    padding-bottom: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(169, 169, 169);
+}
+.detail img{
+    padding-top: 50px;
+    width: 100%;
+}
+.detail ul{
+    padding-top: 50px;
+    font-size: 14px;
+}
