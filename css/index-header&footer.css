@@ -7,7 +7,6 @@
 .icon-container{
     padding: 5px;
     margin-top: 10px;
-    /* margin: auto; */
 }
 #menu-control{
     display: none;
@@ -15,7 +14,6 @@
 .header{
     background-image: url(../pic/bcg-img-02.png);
     background-size: cover;
-    /* width: 1200px; */
     height: 730px;
     width: 100%;
     background-repeat: no-repeat;
@@ -61,7 +59,6 @@ nav a{
 /* 下方icon點選 */
 .service-icon{
     display: flex;
-    /* width: 1200px; */
     height: 100px;
     margin: auto;
     margin-top:80px;
@@ -159,12 +156,6 @@ h4{
   
   @media screen and (max-width:767px) {
     /* 導覽列 */
-    /* .header{
-        height: 50px;
-        
-        position: relative;
-        border-bottom: 1px solid #9B866A;
-    } */
     .header{
         height: 50px;
         position: fixed;
