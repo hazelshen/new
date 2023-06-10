@@ -28,7 +28,9 @@ h2 span{
     top: -20px;
 }
  .aboutus-pic img{
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    width: 600px;
+    height: 400px;
 }
 /* 第二段 */
 .about-us{
@@ -81,28 +83,31 @@ h2 span{
         flex-direction: column-reverse;
     }
     .aboutus-pic{
-        margin: 30px 20px 0px 20px;
+        margin: 20px;
     }
     .aboutus-pic img{
+        /* margin: 30px 20px 0px 20px; */
         width: 100%;
-        /* object-position: left; */
+        height: 250px;
+        /* width: 370px; */
+        /* height: 250px; */
     }
     .pic-heart,.paragraph-second,.icon-fb,.icon-ig{
         display: none;
     }
     .aboutus-content p{
-        margin: 20px;
+        margin: 0 20px 20px 20px;
     }
-    .forrwd{
+    .aboutus-box{
         display: flex;
         flex-direction: column-reverse;
-        margin: 30px 20px 0px 20px;
+        margin: 30px 20px 0 20px;
     }
     .aboutus-img img{           
         width: 100%;
     }
     .aboutus-txt{
-        margin: 30px 20px 0px 20px;
+        margin: 30px 20px 0 20px;
     }
     .paragraph-third{
         margin-top: -50px;
