@@ -29,7 +29,7 @@
 
         $(document).ready(function() {
           var owl = $('.news-box.owl-carousel');
-          var isMobile = window.matchMedia("(max-width: 767px)").matches;
+          var isMobile = window.matchMedia("(max-width: 768px)").matches;
         
           if (isMobile) {
             owl.owlCarousel({

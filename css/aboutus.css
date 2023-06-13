@@ -21,6 +21,7 @@ h2 span{
 .aboutus-info p{
     letter-spacing: 3px;
     line-height: 30px;
+    text-indent: 2em;
 }
 .pic-heart{
     position: relative;
@@ -58,6 +59,7 @@ h2 span{
 .aboutus-text,.aboutus-txt{
     letter-spacing: 3px;
     line-height: 30px;
+    text-indent: 2em;
 }
 .icon-fb{
     margin-left: 160px;

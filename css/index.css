@@ -218,7 +218,7 @@ h3{
     }
     .event-content p{
         margin-top: 5px;
-        font-size: 8px;
+        font-size: 12px;
     }
     /* 最新商品 */
     .star, .goodchoice{
@@ -232,6 +232,9 @@ h3{
         grid-template-columns: repeat(2, 1fr);
         gap:5px;
         margin-top: 40px;
+    }
+    .new-arrival-theme .boy,.new-arrival-theme .other{
+        margin-top: 20px;
     }
     .new-arrival-theme img{
         width: 160px;
